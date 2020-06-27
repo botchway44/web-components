@@ -9,7 +9,7 @@ class IntroPager extends HTMLElement {
             <div class = "title">Title </div>
             <div class="description">Description </div>
            
-            <pip-more-txt> </pip-more-txt>
+            <pip-more-txt theme="dark"> </pip-more-txt>
         </div>
         </div>
 
@@ -146,7 +146,9 @@ class IntroPager extends HTMLElement {
 
     pager.appendChild(title);
     pager.appendChild(description);
-    pager.appendChild(document.createElement("pip-more-txt"));
+    let pip_text = document.createElement("pip-more-txt");
+    pip_text.setAttribute("theme", "dark");
+    pager.appendChild(pip_text);
     pager_wrapper.innerHTML = "";
     pager_wrapper.appendChild(pager);
 

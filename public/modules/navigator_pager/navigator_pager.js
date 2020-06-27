@@ -15,7 +15,7 @@ class NavigatorPager extends HTMLElement {
             <div class="pager-descriptor">
               <div class = "title">Title </div>
               <div class="description">Description </div>    
-              <pip-more-txt> </pip-more-txt>
+              <pip-more-txt class="arrow" theme="white"> </pip-more-txt>
             </div>
 
              <div class="pager-navigator">
@@ -56,6 +56,15 @@ class NavigatorPager extends HTMLElement {
         url:
           "https://www.boldare.com/static/f405365eefb6e9611a96085d7d4da3cd/ace8e/about-us-founders.webp",
       },
+    ];
+
+    this.colors = [
+      "#e83e8c",
+      "#dc3545",
+      "#ffbd54",
+      "#007bff",
+      " #ff525c",
+      "#343a40",
     ];
 
     this.count = this.data.length;
@@ -120,21 +129,25 @@ class NavigatorPager extends HTMLElement {
    */
 
   update(container, data, next) {
-    let pager_wrapper = container.querySelector(".pager-wrapper");
-
-    // let pager = document.createElement("div");
-    // pager.classList.add("pager-text");
-
     // let title = document.createElement("div");
     // title.classList.add("title");
     // title.textContent = data.title;
 
     // let description = document.createElement("div");
     // description.classList.add("description");
+
+    let pager_wrapper = container.querySelector(".pager-wrapper");
     container.querySelector(".description").textContent = data.description;
     container.querySelector(".title").textContent = data.title;
     container.querySelector(".pager-image div img").src = data.url;
 
+    let pager = document.createElement("div");
+    pager.classList.add("move");
+    pager.style.backgroundColor = `${
+      this.colors[this.currrentIndex % this.colors.length]
+    }`;
+    pager_wrapper.innerHTML = "";
+    pager_wrapper.appendChild(pager);
     // pager.appendChild(title);
     // pager.appendChild(description);
     // pager.appendChild(document.createElement("pip-more-txt"));

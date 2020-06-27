@@ -108,22 +108,6 @@
   object-position: center;
 }
 
-.pager-container .pager-image .pager-descriptor {
-  position: absolute;
-  background-color: #242424;
-  right: 0px;
-  top: 0px;
-  width: 31%;
-  height: 45%;
-  min-height: 35%;
-  max-height: 60%;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-}
-
 .pager-container .pager-image .pager-navigator {
   position: absolute;
   right: 0px;
@@ -138,15 +122,37 @@
   align-items: center;
   padding-left: 30px;
 }
-
+.pager-container .pager-image .pager-descriptor {
+  position: absolute;
+  background-color: #242424;
+  right: 0px;
+  top: 0px;
+  width: 25%;
+  height: 45%;
+  min-height: 35%;
+  max-height: 60%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 3%;
+  padding-right: 3%;
+}
 .pager-container .pager-image .pager-descriptor .description {
   width: auto;
   height: auto;
+  font-size: 0.9952rem;
+  font-family: "Nexa";
+  line-height: 25px;
+  margin-bottom: 30px;
 }
 
 .pager-container .pager-image .pager-descriptor .title {
   width: auto;
   height: auto;
+  font-size: 1.952rem;
+  margin-bottom: 30px;
 }
 
 .pager-container .pager-image .pager-navigator div {
@@ -188,32 +194,82 @@
 @media only screen and (max-device-width: 480px) {
   /* styles for mobile browsers smaller than 480px; (iPhone) */
 
+  :host {
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
   .pager-container {
     display: flex;
     flex-direction: column;
     flex-flow: column-reverse;
-    position: relative;
-    height: auto;
-    width: 100%;
+    /* position: relative; */
+    /* height: auto; */
+    /* width: 100%; */
+    /* padding-left: 10%; */
+    /* padding-right: 10%; */
   }
 
   .pager-container .pager-image {
-    position: relative;
+    position: none;
   }
 
   .pager-container .pager-wrapper {
-    width: 100%;
-    margin-left: 0px;
+    display: none;
   }
 
   .pager-container .pager-image {
     width: 100%;
-    height: 40vh;
+    height: 55%;
+    position: relative;
   }
 
   .pager-container .pager-image .pager-navigator {
     width: 100%;
     content: "Next";
+    position: absolute;
+    /* top: 0px; */
+  }
+
+  .pager-container .pager-image .pager-descriptor {
+    position: relative;
+    background-color: #242424;
+    width: 100%;
+    height: 60%;
+    min-height: 60%;
+    max-height: 60%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .pager-container .pager-image .pager-descriptor .description {
+    width: auto;
+    height: auto;
+    font-size: 0.8952rem;
+    font-family: "Nexa";
+    line-height: 25px;
+    margin-bottom: 30px;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .pager-container .pager-image .pager-descriptor .title {
+    width: auto;
+    height: auto;
+    font-size: 1.252rem;
+    margin-bottom: 30px;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .pager-container .pager-image .pager-descriptor .arrow {
+    padding-left: 10%;
+    padding-right: 10%;
   }
 }
 @media only screen and (device-width: 768px) {
@@ -248,7 +304,7 @@ Animations
 }
 
 .move {
-  animation: scale-move 1.5s infinite;
+  animation: scale-move 1.5s;
 }
 
 img {
