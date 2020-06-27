@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <script src="loader.js" defer type="module"></script>
+  </head>
+
+  <body>
+    <pip-navigation></pip-navigation>
+
+    <pip-pager></pip-pager>
+
+    <pip-explainer-txt theme="dark"></pip-explainer-txt>
+
+    <pip-flexible-container> </pip-flexible-container>
+    <diagonal-explainer theme="dark"></diagonal-explainer>
+
+    <br />
+    <br />
+    <br />
+    <navigator-pager></navigator-pager>
+    <div class="pager"></div>
+    <style>
+      body {
+        scroll-behavior: smooth;
+      }
+
+      .pager {
+        height: 10vh;
+        background-color: teal;
+      }
+    </style>
+
+    <script>
+      let data = {
+        name: "John",
+        image: "https://unsplash.com/photos/4TVbbaNAw9Q",
+      };
+      let elem = document.createElement("my-tag");
+      elem.setAttribute("data", JSON.stringify(data));
+
+      document.querySelector("body").appendChild(elem);
+
+      setInterval(() => {
+        data.name = "" + Math.random();
+        elem.setAttribute("data", JSON.stringify(data));
+      }, 1000);
+    </script>
+  </body>
+</html>

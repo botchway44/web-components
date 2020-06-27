@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css?family=Space+Mono");
+@import url("https://fonts.googleapis.com/css?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,700i&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Signika&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Signika:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Reem+Kufi|Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Paytone+One|Reem+Kufi|Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap");
+
+@font-face {
+  font-family: Nexa;
+  src: url("/fonts/NexaLight.otf") format("opentype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Avenir-Light;
+  src: url("/fonts/avenirltstd-light.otf") format("opentype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Commons Medium";
+  /* font-display:fallback; */
+  src: url("fonts/TT-Commons-Medium-5ff3de2e9faed6cc009bcea52ee40eed.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Commons Light";
+  font-display: fallback;
+  src: url(/fonts/TT-Commons-Light-40f6c18622e76e90f99734c88442d6d0.woff)
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: TT Commons Regular;
+  font-display: fallback;
+  src: url(/fonts/TT-Commons-Regular-0ee53eef15363cd18b45ce6c3d22a73a.woff)
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Commons Bold";
+  font-display: fallback;
+  src: url(/fonts/TT-Commons-Bold-b66cf042a913bb1f307047dea7bdc055.woff)
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+.button-container {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  /* width: 200px; */
+  /* height: 100px; */
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  /* margin-top: 40px; */
+  width: 110px;
+}
+
+.button .bottom {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  width: 100%;
+  height: 100%;
+  /* background-color: #2acdc1; */
+  background-color: black;
+  display: block;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  -o-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+
+.button .top {
+  position: relative;
+  left: 0;
+  top: 0;
+  /* width: 100px; */
+  height: 30px;
+  /* padding: 12px 17px 11px 17px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+
+  background-color: #f1d624;
+}
+
+.button-dark .top {
+  border: 2px solid #fff;
+}
+
+.button .top .label {
+  font-family: sans-serif;
+  font-weight: 600;
+  color: #050505;
+  font-size: 12px;
+  line-height: 110%;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  -o-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+
+.button-dark .top .label {
+  color: #fff;
+}
+
+.button:hover .bottom {
+  left: 0;
+  top: 0;
+  background-color: #f3f3f3;
+}
+
+.button:hover .top .label {
+  color: white;
+}
+
+.button-border {
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  -webkit-transition: all 0.25s ease-out;
+  -moz-transition: all 0.25s ease-out;
+  -o-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+}
+
+.button:hover .top .button-border-left,
+.button:hover .top .button-border-right {
+  height: calc(100% + 2px);
+}
+
+.button:hover .top .button-border-top,
+.button:hover .top .button-border-bottom {
+  width: calc(100% + 2px);
+}
+
+.button-border-left {
+  left: -2px;
+  bottom: -2px;
+  width: 2px;
+  height: 0;
+}
+
+.button-border-top {
+  left: -2px;
+  top: -2px;
+  width: 0;
+  height: 2px;
+}
+
+.button-border-right {
+  right: -2px;
+  top: -2px;
+  width: 2px;
+  height: 0;
+}
+
+.button-border-bottom {
+  right: -2px;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+}

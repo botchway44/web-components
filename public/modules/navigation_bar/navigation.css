@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,700i&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Signika&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Signika:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Reem+Kufi|Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Paytone+One|Reem+Kufi|Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+
+@font-face {
+  font-family: Nexa;
+  src: url("/fonts/NexaLight.otf") format("opentype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Commons Medium";
+  /* font-display:fallback; */
+  src: url("fonts/TT-Commons-Medium-5ff3de2e9faed6cc009bcea52ee40eed.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Commons Light";
+  font-display: fallback;
+  src: url(/fonts/TT-Commons-Light-40f6c18622e76e90f99734c88442d6d0.woff)
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: TT Commons Regular;
+  font-display: fallback;
+  src: url(/fonts/TT-Commons-Regular-0ee53eef15363cd18b45ce6c3d22a73a.woff)
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: TT Commons Bold;
+  font-display: fallback;
+  src: url(/fonts/TT-Commons-Bold-b66cf042a913bb1f307047dea7bdc055.woff)
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+:host {
+}
+
+.navigation-container {
+  display: flex;
+  flex-direction: column;
+  /* background-color: #242424; */
+  background-color: #17313b;
+  height: 30vh;
+
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+
+  --margin-left: 60px;
+  --margin-right: 60px;
+}
+
+.navigation-container .nav-description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  /* height: 10vh; */
+  min-height: 20vh;
+  /* background-color: #242424; */
+
+  font-family: Nexa;
+  margin: 0px 100px 0px 100px;
+  margin-left: var(--margin-left);
+  margin-right: var(--margin-right);
+
+  line-height: 1.5rem;
+
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+}
+
+.navigation-container .nav-description .description {
+  width: 350px;
+  font-size: 1.13rem;
+}
+
+.navigation-container .nav-description .subdescription {
+  font-size: 0.952rem;
+}
+
+.navigation-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-family: Nexa;
+  margin: 0px 100px 0px 100px;
+  /* padding-top: 30px; */
+  /* padding-bottom: 30px; */
+  flex-grow: 1;
+}
+
+.navigation-wrapper .nav-links,
+.nav-title {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-content: space-between;
+  align-items: center;
+
+  flex-shrink: 1;
+  margin: 10px 10px;
+  /* background-color: rebeccapurple; */
+}
+
+.navigation-wrapper .nav-links .nav-items {
+  /* width: 40px; */
+  /* height: 40px; */
+  margin: 0px 40px 0px 0px;
+  /* margin-left: var(--margin-left); */
+  /* margin-right: var(--margin-right); */
+  /* background-color: gray; */
+}
+
+.navigation-wrapper .nav-links a {
+  color: white;
+  text-decoration: none;
+  font-family: "Reem Kufi", sans-serif;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.navigation-wrapper .nav-title {
+  font-size: 1.5rem;
+  margin: 0px;
+}
+
+.mobile-nav {
+  display: none;
+}
+/* default styles here for older browsers. 
+       I tend to go for a 600px - 960px width max but using percentages
+    */
+@media only screen and (min-width: 960px) {
+  /* styles for browsers larger than 960px; */
+}
+
+@media only screen and (min-width: 1440px) {
+  /* styles for browsers larger than 1440px; */
+}
+@media only screen and (min-width: 2000px) {
+  /* for sumo sized (mac) screens */
+}
+@media only screen and (max-device-width: 480px) {
+  /* styles for mobile browsers smaller than 480px; (iPhone) */
+
+  .navigation-container {
+    display: flex;
+    flex-direction: column;
+    /* height: 10vh; */
+
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+
+    --margin-left: 60px;
+    --margin-right: 60px;
+  }
+
+  .navigation-wrapper {
+    display: none;
+  }
+
+  .navigation-container .nav-description {
+    height: auto;
+    margin: 0px 10% 0px 10%;
+    min-height: auto;
+    text-align: left;
+    font-size: 0.754rem;
+  }
+
+  .navigation-container .nav-description .description {
+    font-size: 0.85rem;
+  }
+  .navigation-container .nav-description .subdescription {
+    display: none;
+  }
+
+  .navigation-container {
+    height: 20vh;
+  }
+
+  .mobile-nav {
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+    align-items: center;
+    height: 8vh;
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (device-width: 768px) {
+  /* default iPad screens */
+
+  :host {
+    display: none;
+  }
+}
+/* different techniques for iPad screening */
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* For portrait layouts only */
+  /* :host{
+        display: none;
+    } */
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* For landscape layouts only */
+
+  :host {
+    display: none;
+  }
+}
