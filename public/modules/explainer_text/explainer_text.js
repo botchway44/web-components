@@ -33,7 +33,6 @@ class ExplainerText extends HTMLElement {
       container.classList.add("dark");
     } else {
       console.log("Theme White");
-
       container.classList.add("white");
     }
 

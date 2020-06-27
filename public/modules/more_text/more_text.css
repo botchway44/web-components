@@ -5,133 +5,153 @@
 @import url("https://fonts.googleapis.com/css?family=Fjalla+One&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Reem+Kufi|Righteous&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Paytone+One|Reem+Kufi|Righteous&display=swap");
-@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap");
 
 @font-face {
-    font-family: Nexa;
-    src: url("/fonts/NexaLight.otf") format("opentype");
-    font-style: normal
-}
-
-@font-face {
-    font-family: Avenir-Light;
-    src: url("/fonts/avenirltstd-light.otf") format("opentype");
-    font-style: normal
-}
-
-
-@font-face {
-    font-family: "TT Commons Medium";
-    /* font-display:fallback; */
-    src: url("fonts/TT-Commons-Medium-5ff3de2e9faed6cc009bcea52ee40eed.woff") format("woff");
-    font-weight: 400;
-    font-style: normal
+  font-family: Nexa;
+  src: url("/fonts/NexaLight.otf") format("opentype");
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "TT Commons Light";
-    font-display:fallback;
-    src: url(/fonts/TT-Commons-Light-40f6c18622e76e90f99734c88442d6d0.woff) format("woff");
-    font-weight: 400;
-    font-style: normal
+  font-family: Avenir-Light;
+  src: url("/fonts/avenirltstd-light.otf") format("opentype");
+  font-style: normal;
 }
 
 @font-face {
-    font-family: TT Commons Regular;
-    font-display:fallback; 
-    src: url(/fonts/TT-Commons-Regular-0ee53eef15363cd18b45ce6c3d22a73a.woff) format("woff");
-    font-weight: 400;
-    font-style: normal
+  font-family: "TT Commons Medium";
+  /* font-display:fallback; */
+  src: url("fonts/TT-Commons-Medium-5ff3de2e9faed6cc009bcea52ee40eed.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "TT Commons Bold";
-    font-display:fallback;src: url(/fonts/TT-Commons-Bold-b66cf042a913bb1f307047dea7bdc055.woff) format("woff");
-    font-weight: 400;
-    font-style: normal
+  font-family: "TT Commons Light";
+  font-display: fallback;
+  src: url(/fonts/TT-Commons-Light-40f6c18622e76e90f99734c88442d6d0.woff)
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
 }
 
-
-.text-container{
-    font-size: 0.85rem;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bolder;
-    color: rgba(0, 0, 0, 0.411);
+@font-face {
+  font-family: TT Commons Regular;
+  font-display: fallback;
+  src: url(/fonts/TT-Commons-Regular-0ee53eef15363cd18b45ce6c3d22a73a.woff)
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
 }
 
-.text-container .text{
-
+@font-face {
+  font-family: "TT Commons Bold";
+  font-display: fallback;
+  src: url(/fonts/TT-Commons-Bold-b66cf042a913bb1f307047dea7bdc055.woff)
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
 }
 
-.text-container .arrow-forward{
+#dark {
+  color: rgb(0, 0, 0);
+}
 
+#white {
+  color: white;
+}
+
+.text-container {
+  font-size: 0.85rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-container .text {
+  margin-right: 10px;
+}
+.text-container .arrow-forward {
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-container .arrow-forward svg {
+  width: 15px;
+  height: 15px;
 }
 
 .anim-slide-right {
-    -webkit-animation: slide-in-right .4s cubic-bezier(.39,.575,.565,1) both;
-    animation: slide-in-right .4s cubic-bezier(.39,.575,.565,1) both
+  -webkit-animation: slide-in-right 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both;
+  animation: slide-in-right 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
-
 .anim-slide-left {
-    -webkit-animation: slide-in-left .4s cubic-bezier(.39,.575,.565,1) both;
-    animation: slide-in-left .4s cubic-bezier(.39,.575,.565,1) both
+  -webkit-animation: slide-in-left 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: slide-in-left 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 @keyframes slide-in-left {
-    0% {
-        -webkit-transform: translateX(10px);
-        transform: translateX(10px);
-        /* opacity: 0 */
-    }
+  0% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+    /* opacity: 0 */
+  }
 
-    to {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-        /* opacity: 1 */
-    }
+  to {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    /* opacity: 1 */
+  }
 }
 
 @-webkit-keyframes slide-in-left {
-    0% {
-        -webkit-transform: translateX(10px);
-        transform: translateX(10px);
-        /* opacity: 0 */
-    }
+  0% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+    /* opacity: 0 */
+  }
 
-    to {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-        /* opacity: 1 */
-    }
+  to {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    /* opacity: 1 */
+  }
 }
 
-
 @keyframes slide-in-right {
-    0% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-        /* opacity: 0 */
-    }
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    /* opacity: 0 */
+  }
 
-    to {
-        -webkit-transform: translateX(10px);
-        transform: translateX(10px);
-        /* opacity: 1 */
-    }
+  to {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+    /* opacity: 1 */
+  }
 }
 
 @-webkit-keyframes slide-in-right {
-    0% {
-        -webkit-transform: translateX(0p);
-        transform: translateX(0);
-        /* opacity: 0 */
-    }
+  0% {
+    -webkit-transform: translateX(0p);
+    transform: translateX(0);
+    /* opacity: 0 */
+  }
 
-    to {
-        -webkit-transform: translateX(10px);
-        transform: translateX(0px);
-        /* opacity: 1 */
-    }
+  to {
+    -webkit-transform: translateX(10px);
+    transform: translateX(0px);
+    /* opacity: 1 */
+  }
 }
