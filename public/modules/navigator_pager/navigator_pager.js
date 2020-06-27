@@ -14,8 +14,11 @@ class NavigatorPager extends HTMLElement {
 
             <div class="pager-descriptor">
               <div class = "title">Title </div>
-              <div class="description">Description </div>    
+              <div class="description">Description </div>   
+              
+              <div>
               <pip-more-txt class="arrow" theme="white"> </pip-more-txt>
+              </div>
             </div>
 
              <div class="pager-navigator">
