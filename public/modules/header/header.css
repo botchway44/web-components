@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,700i&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Signika&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Signika:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Reem+Kufi|Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Paytone+One|Reem+Kufi|Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap");
+
+@font-face {
+  font-family: Nexa;
+  src: url("/fonts/NexaLight.otf") format("opentype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Avenir-Light;
+  src: url("/fonts/avenirltstd-light.otf") format("opentype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Commons Medium";
+  /* font-display:fallback; */
+  src: url("fonts/TT-Commons-Medium-5ff3de2e9faed6cc009bcea52ee40eed.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Commons Light";
+  font-display: fallback;
+  src: url(/fonts/TT-Commons-Light-40f6c18622e76e90f99734c88442d6d0.woff)
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: TT Commons Regular;
+  font-display: fallback;
+  src: url(/fonts/TT-Commons-Regular-0ee53eef15363cd18b45ce6c3d22a73a.woff)
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Commons Bold";
+  font-display: fallback;
+  src: url(/fonts/TT-Commons-Bold-b66cf042a913bb1f307047dea7bdc055.woff)
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+#dark {
+  color: rgb(0, 0, 0);
+}
+
+#white {
+  color: white;
+}
+
+.header-container {
+  font-size: 0.85rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bolder;
+
+  height: 80vh;
+  background-color: #aac5da;
+
+  position: relative;
+}
+
+.header-container .first-image {
+  position: absolute;
+  left: 0px;
+  height: 100%;
+  width: 25%;
+  background-color: #5040b2;
+  background-image: url("https://res.cloudinary.com/de4rvmslk/image/upload/f_auto,q_auto/v1/gatsby-cloudinary/Boldare-office-open-space-purple.png");
+  background-position: center;
+  background-size: cover;
+}
+.header-container .second-image {
+  position: absolute;
+  right: 0px;
+  height: 95%;
+  width: 65%;
+  background-color: rebeccapurple;
+  background-image: url("https://res.cloudinary.com/de4rvmslk/image/upload/f_auto,w_1300/v1/gatsby-cloudinary/Boldare-office-stairs.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.header-container .text {
+  font-size: 4.5rem;
+  top: 20%;
+  left: 15%;
+  z-index: 1;
+  width: auto;
+  position: absolute;
+  /* width: fit-content; */
+  display: flex;
+  flex-direction: column;
+}
+
+.header-container .text div:first-child {
+  padding: 4% 4% 4% 4%;
+  background-color: aliceblue;
+  width: fit-content;
+}
+
+.header-container .text div:last-child {
+  background-color: aliceblue;
+
+  padding: 0% 4% 4% 4%;
+  width: max-content;
+}
+
+.header-container .text::after {
+  content: "";
+  /* border-bottom: 0.5px; */
+  height: 7px;
+  display: block;
+  background-color: #f1d624;
+  width: 25%;
+  margin-top: 25px;
+  /* border-radius: 10px; */
+}
+
+/* 
+    Screen Resolutions Fix
+    default styles here for older browsers. 
+       I tend to go for a 600px - 960px width max but using percentages
+    */
+@media only screen and (min-width: 960px) {
+  /* styles for browsers larger than 960px; */
+}
+
+@media only screen and (min-width: 1440px) {
+  /* styles for browsers larger than 1440px; */
+}
+@media only screen and (min-width: 2000px) {
+  /* for sumo sized (mac) screens */
+}
+@media only screen and (max-device-width: 480px) {
+  /* styles for mobile browsers smaller than 480px; (iPhone) */
+  .header-container {
+    height: 40vh;
+  }
+
+  .header-container .first-image {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    height: 70%;
+    width: 30%;
+  }
+  .header-container .second-image {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    height: 70%;
+    width: 70%;
+  }
+
+  .header-container .text {
+    font-size: 2.5rem;
+    top: 10%;
+    left: 10%;
+    z-index: 1;
+    width: auto;
+    position: absolute;
+    /* width: fit-content; */
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (device-width: 768px) {
+  /* default iPad screens */
+
+  /* :host{
+            display: none;
+        } */
+}
+/* different techniques for iPad screening */
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* For portrait layouts only */
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* For landscape layouts only */
+}
