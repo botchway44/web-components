@@ -41,7 +41,7 @@ class NavigatorPager extends HTMLElement {
       {
         title: "Web and mobile development",
         description:
-          "We design and create web and mobile apps that help reach business goals,",
+          "We design and create web and mobile apps that help reach business goals,We design and create web and mobile apps that help reach business goals,",
         url:
           "https://www.boldare.com/static/95b2bbcd30e40d6edf07fe570ebbe24d/ace8e/boldare-wireframe-mock.webp",
       },
@@ -103,6 +103,29 @@ class NavigatorPager extends HTMLElement {
     let image_wrapper = container.querySelector(".pager-image div img");
     const slide = new Slider(image_wrapper);
 
+    //Check if backdrop is diabled
+    let temp_backdrop = this.getAttribute("backdrop"); // -> "A new value"
+    if (temp_backdrop === "true") {
+      console.log("Use Backdrop");
+      // container.classList.add("dark");
+      this.backdrop = true;
+    } else {
+      container.querySelector(".pager-wrapper").style.display = "none";
+      this.backdrop = false;
+      console.log("Disable Backdrop");
+      // container.classList.add("white");
+    }
+
+    //check if the Arrow button is enabled
+    // arrow-button="true"
+
+    let arrow_button = this.getAttribute("description-arrow-button");
+    if (arrow_button == "true") {
+      this.des_arrow_button = true;
+    } else {
+      this.des_arrow_button = false;
+      container.querySelector("pip-more-txt").style.display = "none";
+    }
     this.startDataSquence(container);
   }
 
@@ -132,69 +155,23 @@ class NavigatorPager extends HTMLElement {
    */
 
   update(container, data, next) {
-    // let title = document.createElement("div");
-    // title.classList.add("title");
-    // title.textContent = data.title;
-
-    // let description = document.createElement("div");
-    // description.classList.add("description");
-
-    let pager_wrapper = container.querySelector(".pager-wrapper");
     container.querySelector(".description").textContent = data.description;
+
     container.querySelector(".title").textContent = data.title;
     container.querySelector(".pager-image div img").src = data.url;
 
-    let pager = document.createElement("div");
-    pager.classList.add("move");
-    pager.style.backgroundColor = `${
-      this.colors[this.currrentIndex % this.colors.length]
-    }`;
-    pager_wrapper.innerHTML = "";
-    pager_wrapper.appendChild(pager);
-    // pager.appendChild(title);
-    // pager.appendChild(description);
-    // pager.appendChild(document.createElement("pip-more-txt"));
-    // pager_wrapper.innerHTML = "";
-    // pager_wrapper.appendChild(pager);
+    //check if backdrop is enabled
+    if (this.backdrop) {
+      let pager = document.createElement("div");
+      pager.classList.add("move");
+      pager.style.backgroundColor = `${
+        this.colors[this.currrentIndex % this.colors.length]
+      }`;
 
-    //Setup pager Image
-    // let image_wrapper = container.querySelector(".pager-image");
-    // let image = document.createElement("img");
-    // // image.classList.add("");
-    // image.src = data.url;
-
-    // let nextData = document.createElement("div");
-    // nextData.classList.add("pager-navigator");
-    // nextData.classList.add("cursor");
-    // nextData.innerHTML = `<div><strong>Next : </strong> ${next.title}</div>`;
-    // nextData.addEventListener("click", (event) => {
-    //   this.update(
-    //     container,
-    //     next,
-    //     this.data[(this.currrentIndex + 1) % this.count]
-    //   );
-    // });
-
-    //create Text Description
-    // let tt = `
-    //             <div class = "title">Title </div>
-    //             <div class="description">Description </div>
-    //             <pip-more-txt> </pip-more-txt>
-    //         `;
-
-    // let text_des = document.createElement("div");
-    // text_des.classList.add("pager-text");
-    // text_des.innerHTML = tt;
-
-    // //create Animation Listeners
-    // // pager_text.style.transform = 'translate(5px, 0)';
-    // // transition: transform 500ms ease-in-out;
-    // // pager_text.style.transition = "transform 400ms ease-in-out"
-    // pager.classList.add("anim-slide-left");
-    // image_wrapper.innerHTML = "";
-    // image_wrapper.appendChild(image);
-    // image_wrapper.appendChild(text_des);
-    // image_wrapper.appendChild(nextData);
+      let pager_wrapper = container.querySelector(".pager-wrapper");
+      pager_wrapper.innerHTML = "";
+      pager_wrapper.appendChild(pager);
+    }
   }
 
   startDataSquence(container) {

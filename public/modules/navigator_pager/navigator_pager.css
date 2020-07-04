@@ -174,12 +174,14 @@
   height: 60px;
   margin-right: 2px;
   background-color: white;
-  margin-right: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.pager-container .pager-image .pager-navigator div:last-child {
+  margin-right: 0px;
+}
 .pager-container .pager-image .pager-navigator svg {
   width: 24px;
   height: 24px;
@@ -236,9 +238,9 @@
 
   .pager-container .pager-image .pager-navigator {
     width: 100%;
-    content: "Next";
     position: absolute;
-    /* top: 0px; */
+    display: flex;
+    justify-content: flex-end;
   }
 
   .pager-container .pager-image .pager-descriptor {
@@ -284,6 +286,7 @@
     height: auto;
   }
 }
+
 @media only screen and (device-width: 768px) {
   /* default iPad screens */
 

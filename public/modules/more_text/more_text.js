@@ -49,6 +49,8 @@ class MoreText extends HTMLElement {
       container.classList.add("white");
     }
 
+    container.querySelector("svg").style.width = "12px";
+    container.querySelector("svg").style.height = "12px";
     container.querySelector(".text").textContent = des;
 
     // let des_tag = document.createElement("div");
@@ -80,7 +82,7 @@ class MoreText extends HTMLElement {
   disconnectedCallback() {}
 
   static get observedAttributes() {
-    return ["data"];
+    return ["data", "theme"];
   }
   attributeChangedCallback(attr, oldValue, newValue) {
     // if (attr === 'foo') this.doSomething();

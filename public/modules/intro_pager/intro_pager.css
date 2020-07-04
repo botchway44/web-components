@@ -102,7 +102,7 @@
 }
 
 .pager-container .pager-wrapper .pager-text .title {
-  font-size: 3.39rem;
+  font-size: 2.079rem;
   font-family: "Raleway", sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
@@ -111,15 +111,16 @@
   -webkit-font-smoothing: antialiased;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
   color: rgba(0, 0, 0, 0.849);
+  /* line-height: 1.5rem; */
 }
 
 .pager-container .pager-wrapper .pager-text .description {
-  font-size: 1.4rem;
-  font-family: Nexa;
-  font-weight: bold;
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
   color: rgba(0, 0, 0, 0.493);
   margin-bottom: 50px;
-  line-height: 1.7rem;
+  line-height: 1.5rem;
 }
 
 .pager-container .pager-image {
