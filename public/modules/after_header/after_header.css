@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,700i&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Signika&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Signika:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Reem+Kufi|Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Paytone+One|Reem+Kufi|Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap");
+
+@font-face {
+  font-family: Nexa;
+  src: url("/fonts/NexaLight.otf") format("opentype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Avenir-Light;
+  src: url("/fonts/avenirltstd-light.otf") format("opentype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Commons Medium";
+  /* font-display:fallback; */
+  src: url("fonts/TT-Commons-Medium-5ff3de2e9faed6cc009bcea52ee40eed.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Commons Light";
+  font-display: fallback;
+  src: url(/fonts/TT-Commons-Light-40f6c18622e76e90f99734c88442d6d0.woff)
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: TT Commons Regular;
+  font-display: fallback;
+  src: url(/fonts/TT-Commons-Regular-0ee53eef15363cd18b45ce6c3d22a73a.woff)
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Commons Bold";
+  font-display: fallback;
+  src: url(/fonts/TT-Commons-Bold-b66cf042a913bb1f307047dea7bdc055.woff)
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+#dark {
+  color: rgb(0, 0, 0);
+}
+
+#white {
+  color: white;
+}
+
+.header-container {
+  font-size: 0.85rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bolder;
+
+  padding-top: 120px;
+  padding-bottom: 120px;
+  /* background-color: #aac5da; */
+  min-height: 250px;
+  position: relative;
+}
+
+.header-container .image {
+  position: absolute;
+  top: 0px;
+  height: 50%;
+  width: 25%;
+  background-color: #5040b2;
+  background-image: url("https://res.cloudinary.com/de4rvmslk/image/upload/f_auto,q_auto,w_auto/v1/gatsby-cloudinary/Development-Teams-rocket.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.header-container .text {
+  z-index: 1;
+  width: auto;
+  position: relative;
+  width: 38%;
+  padding-left: 30%;
+  display: flex;
+  flex-direction: column;
+  /* background-color: aliceblue; */
+  font-size: 1.5rem;
+  z-index: -1;
+  line-height: 2rem;
+}
+.header-container .text .description {
+  font-size: 1.13rem;
+  font-weight: lighter;
+  padding-bottom: 10%;
+  padding-top: 10%;
+}
+
+.header-container .text .sub-description {
+  font-size: 1.13rem;
+  font-weight: lighter;
+  /* padding-bottom: 10%; */
+  /* padding-top: 10%; */
+}
+
+.header-container .text .title::after {
+  content: "";
+  height: 5px;
+  display: block;
+  background-color: #f1d624;
+  width: 15%;
+  margin-top: 15px;
+}
+
+/* 
+    Screen Resolutions Fix
+    default styles here for older browsers. 
+       I tend to go for a 600px - 960px width max but using percentages
+    */
+@media only screen and (min-width: 960px) {
+  /* styles for browsers larger than 960px; */
+}
+
+@media only screen and (min-width: 1440px) {
+  /* styles for browsers larger than 1440px; */
+}
+@media only screen and (min-width: 2000px) {
+  /* for sumo sized (mac) screens */
+}
+@media only screen and (max-device-width: 480px) {
+  /* styles for mobile browsers smaller than 480px; (iPhone) */
+
+  .header-container .image {
+    display: none;
+  }
+
+  .header-container .text {
+    padding-left: 10%;
+    padding-right: 10%;
+    width: auto;
+  }
+}
+
+@media only screen and (device-width: 768px) {
+  /* default iPad screens */
+
+  /* :host{
+            display: none;
+        } */
+}
+/* different techniques for iPad screening */
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* For portrait layouts only */
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* For landscape layouts only */
+}

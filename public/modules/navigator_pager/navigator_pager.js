@@ -104,21 +104,28 @@ class NavigatorPager extends HTMLElement {
     const slide = new Slider(image_wrapper);
 
     //Check if backdrop is diabled
-    let theme = this.getAttribute("backdrop"); // -> "A new value"
-    if (theme === "true") {
+    let temp_backdrop = this.getAttribute("backdrop"); // -> "A new value"
+    if (temp_backdrop === "true") {
       console.log("Use Backdrop");
       // container.classList.add("dark");
-      container.classList.add("enable_backdrop");
       this.backdrop = true;
     } else {
       container.querySelector(".pager-wrapper").style.display = "none";
       this.backdrop = false;
       console.log("Disable Backdrop");
       // container.classList.add("white");
-
-      container.classList.add("disable_backdrop");
     }
 
+    //check if the Arrow button is enabled
+    // arrow-button="true"
+
+    let arrow_button = this.getAttribute("description-arrow-button");
+    if (arrow_button == "true") {
+      this.des_arrow_button = true;
+    } else {
+      this.des_arrow_button = false;
+      container.querySelector("pip-more-txt").style.display = "none";
+    }
     this.startDataSquence(container);
   }
 
@@ -149,6 +156,7 @@ class NavigatorPager extends HTMLElement {
 
   update(container, data, next) {
     container.querySelector(".description").textContent = data.description;
+
     container.querySelector(".title").textContent = data.title;
     container.querySelector(".pager-image div img").src = data.url;
 

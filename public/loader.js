@@ -8,3 +8,4 @@ import "/modules/flexible_container/flexible_container.js";
 import "/modules/diagonal_explainer/diagonal_explainer.js";
 import "/modules/navigator_pager/navigator_pager.js";
 import "/modules/header/header.js";
+import "/modules/after_header/after_header.js";
