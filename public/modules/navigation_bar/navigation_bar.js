@@ -82,6 +82,14 @@ class NavigationBar extends HTMLElement {
         } else {
           // console.log("Out View")
         }
+
+        //Make the NavBar static
+        // if (window.scrollY == 0) {
+        //   //user is at the top of the page; no need to show the back to top button
+        //   container.style.position = "relative";
+        // } else {
+        //   container.style.position = "fixed";
+        // }
       });
     });
   }
