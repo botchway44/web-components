@@ -50,6 +50,7 @@
 }
 
 :host {
+  z-index: 999999 !important;
 }
 
 .navigation-container {

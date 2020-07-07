@@ -64,7 +64,7 @@
   display: flex;
   justify-content: flex-end;
   /* background-color: tomato; */
-  height: 90vh;
+  height: 120vh;
 
   -webkit-font-smoothing: antialiased;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
@@ -127,7 +127,7 @@
   width: auto;
   /* background-color: #aac5da; */
 
-  font-family: "Raleway", sans-serif;
+  /* font-family: "Raleway", sans-serif; */
   display: inline-flex;
   justify-content: flex-start;
   align-items: center;
@@ -139,8 +139,8 @@
   right: 0px;
   top: 0px;
   width: 25%;
-  height: 45%;
-  min-height: 35%;
+  height: max-content;
+  min-height: 40%;
   max-height: 60%;
   color: white;
   display: flex;
@@ -154,7 +154,7 @@
   width: auto;
   height: auto;
   font-size: 0.9952rem;
-  font-family: "Nexa";
+  /* font-family: "Nexa"; */
   line-height: 25px;
   margin-bottom: 30px;
 }
@@ -164,6 +164,7 @@
   height: auto;
   font-size: 1.952rem;
   margin-bottom: 30px;
+  font-weight: bold;
 }
 .pager-container .pager-image .pager-navigator div .arrow {
   width: auto;
@@ -216,7 +217,7 @@
     flex-direction: column;
     flex-flow: column-reverse;
     /* position: relative; */
-    /* height: auto; */
+    height: 80vh;
     /* width: 100%; */
     /* padding-left: 10%; */
     /* padding-right: 10%; */
@@ -269,7 +270,7 @@
     width: auto;
     height: auto;
     font-size: 0.8952rem;
-    font-family: "Nexa";
+    /* font-family: "Nexa"; */
     line-height: 25px;
   }
 

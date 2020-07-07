@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/navigation.css" />
     <script src="loader.js" defer type="module"></script>
   </head>
 
   <body>
-    <pip-navigation></pip-navigation>
+    <pip-navigation id="nav"></pip-navigation>
 
     <pip-pager></pip-pager>
 
@@ -21,6 +22,7 @@
     <br />
     <br />
     <br />
+    <pip-explainer-txt theme="white"></pip-explainer-txt>
     <navigator-pager
       description-arrow-button="true"
       backdrop="true"
@@ -32,8 +34,13 @@
     <pip-after-header></pip-after-header>
 
     <navigator-pager backdrop="false"></navigator-pager>
+
+    <pip-explainer-img></pip-explainer-img>
     <div class="pager"></div>
     <style>
+      * {
+        z-index: 0;
+      }
       body {
         scroll-behavior: smooth;
       }
@@ -58,6 +65,8 @@
         data.name = "" + Math.random();
         elem.setAttribute("data", JSON.stringify(data));
       }, 1000);
+
+      function name(params) {}
     </script>
   </body>
 </html>
