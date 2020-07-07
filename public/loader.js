@@ -2,6 +2,7 @@ import "/modules/navigation_bar/navigation_bar.js";
 import "/modules/intro_pager/intro_pager.js";
 import "/modules/more_text/more_text.js";
 import "/modules/explainer_text/explainer_text.js";
+import "/modules/explainer_image/explainer_image.js";
 import "/modules/detailed_list/detailed_list.js";
 import "/modules/shadow_button/shadow_button.js";
 import "/modules/flexible_container/flexible_container.js";

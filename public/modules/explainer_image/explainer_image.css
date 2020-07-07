@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css?family=Space+Mono");
+@import url("https://fonts.googleapis.com/css?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,700i&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Signika&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Signika:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Reem+Kufi|Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Paytone+One|Reem+Kufi|Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap");
+
+@font-face {
+  font-family: Nexa;
+  src: url("/fonts/NexaLight.otf") format("opentype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Avenir-Light;
+  src: url("/fonts/avenirltstd-light.otf") format("opentype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Commons Medium";
+  /* font-display:fallback; */
+  src: url("fonts/TT-Commons-Medium-5ff3de2e9faed6cc009bcea52ee40eed.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Commons Light";
+  font-display: fallback;
+  src: url(/fonts/TT-Commons-Light-40f6c18622e76e90f99734c88442d6d0.woff)
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: TT Commons Regular;
+  font-display: fallback;
+  src: url(/fonts/TT-Commons-Regular-0ee53eef15363cd18b45ce6c3d22a73a.woff)
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Commons Bold";
+  font-display: fallback;
+  src: url(/fonts/TT-Commons-Bold-b66cf042a913bb1f307047dea7bdc055.woff)
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dark {
+  /* background-color: #242424; */
+  background-color: #17313b;
+  color: white;
+}
+
+.white {
+  background-color: #f0f0f0;
+
+  font-weight: bolder;
+  /* background-color: #f6f6f6; */
+  color: black;
+}
+
+.text-container {
+  font-size: 0.85rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bolder;
+  /* color: rgba(0, 0, 0, 0.411); */
+
+  display: flex;
+  flex-direction: column;
+
+  /* padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 100px; */
+  min-height: max-content;
+  height: 400px;
+  /* background-color: #f6f6f6; */
+  background-image: url("https://engineering.stanford.edu/sites/default/files/styles/full-width-banner-short/public/get-involved_banner_03.jpg?itok=0uYNj70D");
+  background-position: center top;
+  background-size: cover;
+  position: relative;
+}
+
+.text-container .description {
+  /* width: 45vw; */
+  font-size: 1.22rem;
+  line-height: 1.92rem;
+  /* font-family: Nexa; */
+  /* font-weight: bold; */
+  /* font-family: Nexa; */
+  /* color: rgba(0, 0, 0, 0.493); */
+
+  position: absolute;
+  right: 0px;
+  bottom: 0;
+  /* bottom: 0px; */
+  background-color: #ffbd54;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 10px;
+  margin-bottom: 2%;
+
+  display: flex;
+  flex-direction: row;
+}
+
+/* 
+    Screen Resolutions Fix
+    default styles here for older browsers. 
+       I tend to go for a 600px - 960px width max but using percentages
+    */
+@media only screen and (min-width: 960px) {
+  /* styles for browsers larger than 960px; */
+}
+
+@media only screen and (min-width: 1440px) {
+  /* styles for browsers larger than 1440px; */
+}
+@media only screen and (min-width: 2000px) {
+  /* for sumo sized (mac) screens */
+}
+@media only screen and (max-device-width: 480px) {
+  /* styles for mobile browsers smaller than 480px; (iPhone) */
+  .text-container {
+    background-position: center;
+    background-size: cover;
+    position: none;
+  }
+
+  .text-container .description {
+    /* width: 100%; */
+    font-size: 0.862rem;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+    position: none;
+  }
+
+  .text-container .description span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media only screen and (device-width: 768px) {
+  /* default iPad screens */
+
+  /* :host{
+              display: none;
+          } */
+}
+/* different techniques for iPad screening */
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* For portrait layouts only */
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* For landscape layouts only */
+}
+
+.anim-slide-right {
+  -webkit-animation: slide-in-right 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both;
+  animation: slide-in-right 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.anim-slide-left {
+  -webkit-animation: slide-in-left 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: slide-in-left 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+.anim-pan-in {
+  -webkit-animation: pan-in 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: pan-in 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+    /* opacity: 0 */
+  }
+
+  to {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    /* opacity: 1 */
+  }
+}
+
+@-webkit-keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+    /* opacity: 0 */
+  }
+
+  to {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    /* opacity: 1 */
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    /* opacity: 0 */
+  }
+
+  to {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+    /* opacity: 1 */
+  }
+}
+
+@-webkit-keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(0p);
+    transform: translateX(0);
+    /* opacity: 0 */
+  }
+
+  to {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+    /* opacity: 1 */
+  }
+}
+
+/* Pan In Animation */
+
+@keyframes pan-in {
+  0% {
+    /* opacity: 0 */
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
