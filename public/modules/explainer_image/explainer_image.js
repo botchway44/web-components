@@ -60,13 +60,13 @@ class ExplainerImage extends HTMLElement {
     container.querySelector("svg").style.objectFit = "contain";
     container.querySelector("svg").style.objectPosition = "cover";
 
-    container.addEventListener("mouseover", (evt) => {
-      container.classList.add("anim-pan-in");
-    });
+    // container.addEventListener("mouseover", (evt) => {
+    //   container.classList.add("anim-pan-in");
+    // });
 
-    container.addEventListener("mouseleave", (evt) => {
-      container.classList.remove("anim-pan-in");
-    });
+    // container.addEventListener("mouseleave", (evt) => {
+    //   container.classList.remove("anim-pan-in");
+    // });
   }
 
   disconnectedCallback() {}
