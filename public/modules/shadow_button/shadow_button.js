@@ -4,7 +4,7 @@ class ShadowButton extends HTMLElement {
 
     this.template = `
         
-        <a href="#" class="button nav-link">
+        <a href="/login.html" class="button nav-link">
 
           <div class="bottom"></div>
 

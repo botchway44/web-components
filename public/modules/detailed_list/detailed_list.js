@@ -13,7 +13,7 @@ class DetailedList extends HTMLElement {
         </div>
         
         <div class = "button">
-        <button class="click-button">Learn More</button>
+        <pip-simple-button theme="dark" text="Read more"> </pip-simple-button>
         </div>
         `;
   }

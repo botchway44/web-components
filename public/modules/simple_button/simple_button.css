@@ -1,13 +1,42 @@
+#dark {
+  color: rgb(255, 255, 255);
+  background-color: #1e1e1edc;
+}
 
-.flexible-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding-left: 30px;
-  /* background-color: #242424; */
+#white {
+  color: rgb(14, 14, 14);
+  background-color: rgba(255, 255, 255, 0);
+  border: 1.2px solid black;
+}
 
-  background-color: #17313b;
-  padding-top: 50px;
+:host {
+  display: block;
+  width: 100%;
+}
+
+.button-container {
+  width: 100%;
+  height: 35px;
+  color: white;
+  font-family: "Josefin Sans", "Times New Roman";
+  cursor: pointer;
+  border-radius: 0.3rem;
+  border: none;
+  font-size: 1.025rem;
+}
+
+.button-container:active,
+.button-container:focus,
+.button-container:enabled {
+  border: none;
+  border-color: none;
+  outline: none;
+  box-sizing: unset;
+  border-style: none;
+}
+
+.button-container:hover {
+  background-color: aquamarine;
 }
 
 /* 
@@ -27,17 +56,10 @@
 }
 @media only screen and (max-device-width: 480px) {
   /* styles for mobile browsers smaller than 480px; (iPhone) */
-  .flexible-container {
-    padding-left: 10%;
-    padding-right: 10%;
-  }
 }
+
 @media only screen and (device-width: 768px) {
   /* default iPad screens */
-
-  /* :host{
-                    display: none;
-                } */
 }
 /* different techniques for iPad screening */
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {

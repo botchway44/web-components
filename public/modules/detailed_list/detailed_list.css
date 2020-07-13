@@ -1,62 +1,7 @@
-@import url("https://fonts.googleapis.com/css?family=Space+Mono");
-@import url("https://fonts.googleapis.com/css?family=Righteous&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,700i&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Signika&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Signika:400,700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Fjalla+One&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Reem+Kufi|Righteous&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Paytone+One|Reem+Kufi|Righteous&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap");
-
-@font-face {
-  font-family: Nexa;
-  src: url("/fonts/NexaLight.otf") format("opentype");
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Avenir-Light";
-  src: url("/fonts/avenirltstd-light.otf") format("opentype");
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "TT Commons Medium";
-  /* font-display:fallback; */
-  src: url("fonts/TT-Commons-Medium.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "TT Commons Light";
-  font-display: fallback;
-  src: url("/fonts/TT-Commons-Light.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "TT Commons Regular";
-  font-display: fallback;
-  src: url("/fonts/TT-Commons-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "TT Commons Bold";
-  font-display: fallback;
-  src: url("/fonts/TT-Commons-Bold.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
 .text-container {
   font-size: 0.75rem;
   font-family: "Montserrat", sans-serif;
-  font-weight: bolder;
+  /* font-weight: bolder; */
   color: rgba(0, 0, 0, 0.411);
 
   display: flex;
@@ -93,16 +38,14 @@
 
   /* font-weight: normal;    */
   color: rgba(255, 255, 255, 0.89);
-  font-size: 0.765rem;
+  font-size: 1.0765rem;
   /* font-family:  sans-serif,; */
-  font-weight: lighter;
+  font-weight: normal;
   line-height: 20px;
   margin-bottom: 20px;
   padding-left: 40px;
 
-  font: 15px/25px Roboto, Noto Sans, Noto Sans JP, Noto Sans KR,
-    Noto Naskh Arabic, Noto Sans Thai, Noto Sans Hebrew, Noto Sans Bengali,
-    sans-serif;
+  font-family: "Reem Kufi";
 }
 
 .text-container .list {
@@ -115,9 +58,8 @@
   margin-bottom: 20px;
   padding-left: 20px;
   color: rgb(255, 255, 255, 0.89);
-  font: 15px/25px Roboto, Noto Sans, Noto Sans JP, Noto Sans KR,
-    Noto Naskh Arabic, Noto Sans Thai, Noto Sans Hebrew, Noto Sans Bengali,
-    sans-serif;
+  font-size: 0.952rem;
+  font-family: "Reem Kufi";
 }
 
 .text-container .list li {
@@ -131,6 +73,8 @@
   font-weight: bold;
   /* font-size: 1.5rem; */
   padding-left: 45px;
+
+  width: 50%;
 }
 
 .click-button {
