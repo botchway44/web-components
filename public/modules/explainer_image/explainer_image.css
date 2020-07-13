@@ -1,62 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Space+Mono");
-@import url("https://fonts.googleapis.com/css?family=Righteous&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,700i&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Signika&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Signika:400,700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Fjalla+One&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Reem+Kufi|Righteous&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Paytone+One|Reem+Kufi|Righteous&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap");
-
-@font-face {
-  font-family: Nexa;
-  src: url("/fonts/NexaLight.otf") format("opentype");
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Avenir-Light;
-  src: url("/fonts/avenirltstd-light.otf") format("opentype");
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "TT Commons Medium";
-  /* font-display:fallback; */
-  src: url("fonts/TT-Commons-Medium-5ff3de2e9faed6cc009bcea52ee40eed.woff")
-    format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "TT Commons Light";
-  font-display: fallback;
-  src: url(/fonts/TT-Commons-Light-40f6c18622e76e90f99734c88442d6d0.woff)
-    format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: TT Commons Regular;
-  font-display: fallback;
-  src: url(/fonts/TT-Commons-Regular-0ee53eef15363cd18b45ce6c3d22a73a.woff)
-    format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "TT Commons Bold";
-  font-display: fallback;
-  src: url(/fonts/TT-Commons-Bold-b66cf042a913bb1f307047dea7bdc055.woff)
-    format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
 .dark {
   /* background-color: #242424; */
   background-color: #17313b;
@@ -73,8 +14,8 @@
 
 .text-container {
   font-size: 0.85rem;
-  font-family: "Montserrat", sans-serif;
-  font-weight: bolder;
+  font-family: "Reem Kufi", sans-serif;
+  /* font-weight: bolder; */
   /* color: rgba(0, 0, 0, 0.411); */
 
   display: flex;
@@ -131,7 +72,7 @@
 @media only screen and (min-width: 2000px) {
   /* for sumo sized (mac) screens */
 }
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-device-width: 480px), (max-width: 1200px) {
   /* styles for mobile browsers smaller than 480px; (iPhone) */
   .text-container {
     background-position: center;
