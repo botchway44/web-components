@@ -37,29 +37,29 @@ class NavigatorPager extends HTMLElement {
         </div>
         `;
 
-    this.data = [
-      {
-        title: "Web and mobile development",
-        description:
-          "We design and create web and mobile apps that help reach business goals,We design and create web and mobile apps that help reach business goals,",
-        url:
-          "https://www.boldare.com/static/95b2bbcd30e40d6edf07fe570ebbe24d/ace8e/boldare-wireframe-mock.webp",
-      },
-      {
-        title: "Product design and UX/UI",
-        description:
-          "Great design not only looks good, but has significant influence on profitability. ",
-        url:
-          "https://www.boldare.com/static/031979217d41fafe3c2763b57eba9d73/ace8e/mobiles.webp",
-      },
-      {
-        title: "Full product development",
-        description:
-          "Great design not only looks good, but has significant influence on profitability.",
-        url:
-          "https://www.boldare.com/static/f405365eefb6e9611a96085d7d4da3cd/ace8e/about-us-founders.webp",
-      },
-    ];
+    // this.data = [
+    //   {
+    //     title: "Web and mobile development",
+    //     description:
+    //       "We design and create web and mobile apps that help reach business goals,We design and create web and mobile apps that help reach business goals,",
+    //     url:
+    //       "https://www.boldare.com/static/95b2bbcd30e40d6edf07fe570ebbe24d/ace8e/boldare-wireframe-mock.webp",
+    //   },
+    //   {
+    //     title: "Product design and UX/UI",
+    //     description:
+    //       "Great design not only looks good, but has significant influence on profitability. ",
+    //     url:
+    //       "https://www.boldare.com/static/031979217d41fafe3c2763b57eba9d73/ace8e/mobiles.webp",
+    //   },
+    //   {
+    //     title: "Full product development",
+    //     description:
+    //       "Great design not only looks good, but has significant influence on profitability.",
+    //     url:
+    //       "https://www.boldare.com/static/f405365eefb6e9611a96085d7d4da3cd/ace8e/about-us-founders.webp",
+    //   },
+    // ];
 
     this.colors = [
       "#e83e8c",
@@ -70,16 +70,20 @@ class NavigatorPager extends HTMLElement {
       "#343a40",
     ];
 
-    this.count = this.data.length;
     this.currrentIndex = 0;
     this.isRunning = false;
+    this.data = null;
+    this.count = null;
   }
 
   connectedCallback() {
     this.attachShadow({ mode: "open" });
 
-    // var att = this.getAttribute("data"); // -> "Hello World"
-
+    // this.data = this.getAttribute("data"); // -> "Hello World"
+    this.data = JSON.parse(this.getAttribute("data"));
+    console.log(this.data.length);
+    this.count = this.data.length;
+    // this.count = 3;
     // // console.log(JSON.parse(encodeURIComponent('{}')));
     // let obj = JSON.parse(att);
     // console.log(att);

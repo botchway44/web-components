@@ -1,0 +1,89 @@
+#dark {
+  color: rgb(0, 0, 0);
+}
+
+#white {
+  color: white;
+}
+:host {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  /* background-color: #1e1e1e; */
+  display: flex;
+  flex-direction: column;
+  /* color: white; */
+  line-height: 1.5rem;
+  font-size: 0.92rem;
+  font-family: "Josefin Sans";
+}
+
+.container .footer-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  padding-left: 1%;
+  padding-right: 1%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+/* 
+    Screen Resolutions Fix
+    default styles here for older browsers. 
+       I tend to go for a 600px - 960px width max but using percentages
+    */
+@media only screen and (min-width: 960px) {
+  /* styles for browsers larger than 960px; */
+}
+
+@media only screen and (min-width: 1440px) {
+  /* styles for browsers larger than 1440px; */
+}
+@media only screen and (min-width: 2000px) {
+  /* for sumo sized (mac) screens */
+}
+@media only screen and (max-device-width: 480px), (max-width: 1200px) {
+  /* styles for mobile browsers smaller than 480px; (iPhone) */
+  /* Also When it reaches maximum Zoom Level */
+
+  .container .footer-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .container .footer-details div {
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (device-width: 768px) {
+  /* default iPad screens */
+}
+/* different techniques for iPad screening */
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* For portrait layouts only */
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* For landscape layouts only */
+  .container .side-page:last-child {
+    width: 100%;
+  }
+
+  .container .sign-in .sign-im-container {
+    width: 80%;
+  }
+  .container .side-page:first-child {
+    display: none;
+  }
+}

@@ -1,15 +1,18 @@
-class Header extends HTMLElement {
+class MinimalFooter extends HTMLElement {
   constructor() {
     super();
 
     this.template = `
-       <div class="text"> 
-          <div> Careers  </div>
-          <div> at STAQS  </div>
-       </div>
-        <div class="first-image"> </div>
-        <div class="second-image"> </div>
-        </span>
+        <hr width="95%">
+        <div class="footer-details">
+            <div class="site-details">
+            Software Staqs - 2020, Inc. All rights reserved.
+            </div>
+
+            <div class="site-details">
+            + Quick Links Instagram Twitter Facebook Linkedin
+            </div>
+        </div>
         `;
   }
 
@@ -27,19 +30,16 @@ class Header extends HTMLElement {
     // list.setAttribute("data", "A new value");
     // list.getAttribute("data"); // -> "A new value"
     let container = document.createElement("div");
-    container.classList.add("header-container");
+    container.classList.add("container");
     this.shadowRoot.appendChild(container);
 
     //append HTML Template to container
     container.innerHTML = this.template;
     //Load Stylesheet this way
     var preloadLink = document.createElement("link");
-    preloadLink.href = "/modules/header/header.css";
+    preloadLink.href = "/modules/minimal_footer/minimal_footer.css";
     preloadLink.rel = "stylesheet";
     this.shadowRoot.appendChild(preloadLink);
-
-    //create a handler for description
-    let des = `Case Study`;
 
     let theme = this.getAttribute("theme"); // -> "A new value"
     if (theme === "dark") {
@@ -62,4 +62,4 @@ class Header extends HTMLElement {
   }
 }
 
-window.customElements.define("pip-header", Header);
+window.customElements.define("pip-minimal-footer", MinimalFooter);

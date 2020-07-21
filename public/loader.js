@@ -13,3 +13,4 @@ import "/modules/header/header.js";
 import "/modules/after_header/after_header.js";
 import "/modules/fixed_navigation/fixed_navigation.js";
 import "/modules/login_page/login_page.js";
+import "/modules/minimal_footer/minimal_footer.js";

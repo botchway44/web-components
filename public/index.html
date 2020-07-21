@@ -24,23 +24,27 @@
     <br />
     <br />
     <pip-explainer-txt theme="white"></pip-explainer-txt>
-    <navigator-pager
-      description-arrow-button="true"
-      backdrop="true"
-    ></navigator-pager>
+    <!-- <navigator-pager
+      description-arrow-button="false"
+      backdrop="false"
+    ></navigator-pager> -->
     <br />
     <br />
-    <pip-header theme="dark"></pip-header>
+
+    <pip-header data="" theme="dark"></pip-header>
 
     <pip-after-header></pip-after-header>
 
-    <navigator-pager backdrop="false"></navigator-pager>
-    <br />
-    <br />
+    <!-- <navigator-pager backdrop="false"></navigator-pager> -->
     <br />
     <br />
     <pip-explainer-img></pip-explainer-img>
-    <div class="pager"></div>
+
+    <br />
+    <br />
+    <pip-minimal-footer></pip-minimal-footer>
+    <!-- <div class="pager"></div> -->
+
     <style>
       * {
         z-index: 0;
@@ -60,17 +64,47 @@
         name: "John",
         image: "https://unsplash.com/photos/4TVbbaNAw9Q",
       };
-      let elem = document.createElement("my-tag");
-      elem.setAttribute("data", JSON.stringify(data));
+      // let elem = document.createElement("my-tag");
+      // elem.setAttribute("data", JSON.stringify(data));
 
-      document.querySelector("body").appendChild(elem);
+      // document.querySelector("body").appendChild(elem);
 
-      setInterval(() => {
-        data.name = "" + Math.random();
-        elem.setAttribute("data", JSON.stringify(data));
-      }, 1000);
+      // setInterval(() => {
+      //   data.name = "" + Math.random();
+      //   elem.setAttribute("data", JSON.stringify(data));
+      // }, 1000);
 
       function name(params) {}
+
+      let pagerData = [
+        {
+          title: "Web and mobile development",
+          description:
+            "We design and create web and mobile apps that help reach business goals,We design and create web and mobile apps that help reach business goals,",
+          url:
+            "https://www.boldare.com/static/95b2bbcd30e40d6edf07fe570ebbe24d/ace8e/boldare-wireframe-mock.webp",
+        },
+        {
+          title: "Product design and UX/UI",
+          description:
+            "Great design not only looks good, but has significant influence on profitability. ",
+          url:
+            "https://www.boldare.com/static/031979217d41fafe3c2763b57eba9d73/ace8e/mobiles.webp",
+        },
+        {
+          title: "Full product development",
+          description:
+            "Great design not only looks good, but has significant influence on profitability.",
+          url:
+            "https://www.boldare.com/static/f405365eefb6e9611a96085d7d4da3cd/ace8e/about-us-founders.webp",
+        },
+      ];
+      let pager = document.createElement("navigator-pager");
+      pager.data = JSON.stringify(pagerData);
+      pager.setAttribute("data", JSON.stringify(pagerData));
+      // console.log(pager);
+      // document.body.appendChild(pager);
+      document.querySelector("diagonal-explainer").append(pager);
     </script>
   </body>
 </html>
