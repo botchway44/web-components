@@ -31,9 +31,12 @@ class ExplainerText extends HTMLElement {
     if (theme === "dark") {
       console.log("Theme Dark");
       container.classList.add("dark");
-    } else {
+    } else if (theme === "white") {
       console.log("Theme White");
       container.classList.add("white");
+    } else {
+      console.log("Theme None");
+      container.classList.add("noBackground");
     }
 
     //append HTML Template to container

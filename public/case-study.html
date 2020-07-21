@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <script src="loader.js" defer type="module"></script>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+  </head>
+  <body>
+    <pip-min-navigation></pip-min-navigation>
+
+    <pip-explainer-txt theme="none"></pip-explainer-txt>
+    <div id="starting-point"></div>
+    <pip-minimal-footer></pip-minimal-footer>
+
+    <script>
+      let data = {
+        name: "John",
+        image: "https://unsplash.com/photos/4TVbbaNAw9Q",
+      };
+      // let elem = document.createElement("my-tag");
+      // elem.setAttribute("data", JSON.stringify(data));
+
+      // document.querySelector("body").appendChild(elem);
+
+      // setInterval(() => {
+      //   data.name = "" + Math.random();
+      //   elem.setAttribute("data", JSON.stringify(data));
+      // }, 1000);
+
+      function name(params) {}
+
+      let pagerData = [
+        {
+          title: "Web and mobile development",
+          description:
+            "We design and create web and mobile apps that help reach business goals,We design and create web and mobile apps that help reach business goals,",
+          url:
+            "https://www.boldare.com/static/95b2bbcd30e40d6edf07fe570ebbe24d/ace8e/boldare-wireframe-mock.webp",
+        },
+        {
+          title: "Product design and UX/UI",
+          description:
+            "Great design not only looks good, but has significant influence on profitability. ",
+          url:
+            "https://www.boldare.com/static/031979217d41fafe3c2763b57eba9d73/ace8e/mobiles.webp",
+        },
+        {
+          title: "Full product development",
+          description:
+            "Great design not only looks good, but has significant influence on profitability.",
+          url:
+            "https://www.boldare.com/static/f405365eefb6e9611a96085d7d4da3cd/ace8e/about-us-founders.webp",
+        },
+      ];
+
+      let startingPoint = document.querySelector("#starting-point");
+      let pager = document.createElement("navigator-pager");
+      pager.data = JSON.stringify(pagerData);
+      pager.setAttribute("data", JSON.stringify(pagerData));
+      // console.log(pager);
+      // document.body.appendChild(pager);
+      startingPoint.append(pager);
+
+      let pager1 = document.createElement("navigator-pager");
+      pager1.data = JSON.stringify(pagerData);
+      pager1.setAttribute("data", JSON.stringify(pagerData));
+      pager1.setAttribute("backdrop", "true");
+      // console.log(pager);
+      // document.body.appendChild(pager);
+      startingPoint.append(pager1);
+    </script>
+  </body>
+</html>

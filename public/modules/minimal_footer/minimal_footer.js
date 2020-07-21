@@ -10,7 +10,27 @@ class MinimalFooter extends HTMLElement {
             </div>
 
             <div class="site-details">
-            + Quick Links Instagram Twitter Facebook Linkedin
+            + Quick Links <br>   
+
+
+            <div class="icon-container">
+                <a href="#">
+                <svg class="icon"><use xlink:href="/svgs/icons.svg#icon-facebook"></svg>
+                </a>
+
+                <a href="#">
+                <svg class="icon"><use xlink:href="/svgs/icons.svg#icon-linkedin"></svg>
+                </a>
+
+                <a href="#">
+                <svg class="icon"><use xlink:href="/svgs/icons.svg#icon-twitter"></svg>
+                </a>
+
+                <a href="#">
+                <svg class="icon"><use xlink:href="/svgs/icons.svg#icon-instagram"></svg>
+                </a>
+           </div>
+
             </div>
         </div>
         `;

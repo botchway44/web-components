@@ -1,4 +1,4 @@
-class NavigationBar extends HTMLElement {
+class MinimalNavigationBar extends HTMLElement {
   constructor() {
     super();
 
@@ -10,12 +10,7 @@ class NavigationBar extends HTMLElement {
         </div>
 
         <div class="mobile-nav"> 
-        
-        </div>
-
-        <div class="nav-description">
-            <div class="description">Description</div>
-            <div class="subdescription">SubText</div>
+           
         </div>
         `;
 
@@ -59,23 +54,10 @@ class NavigationBar extends HTMLElement {
     this.container.innerHTML = this.template;
     //Load Stylesheet this way
     var preloadLink = document.createElement("link");
-    preloadLink.href = "/modules/navigation_bar/navigation.css";
+    preloadLink.href =
+      "/modules/minimal_navigation_bar/minimal_navigation_bar.css";
     preloadLink.rel = "stylesheet";
     this.shadowRoot.appendChild(preloadLink);
-
-    //create a handler for description
-    let des = this.data.description;
-
-    let sub = `Do you have a product in mind?
-        <br>
-        Get in touch.`;
-
-    this.container.querySelector(
-      ".description"
-    ).textContent = this.data.description;
-    this.container.querySelector(
-      ".subdescription"
-    ).innerHTML = this.data.miniDescription;
 
     // let des_tag = document.createElement("div");
     // des_tag.textContent = des;
@@ -105,7 +87,6 @@ class NavigationBar extends HTMLElement {
     });
 
     this.buildNavigationLinks(this.data);
-
     this.buildMobileNavigation(this.data);
   }
 
@@ -196,4 +177,4 @@ class NavigationBar extends HTMLElement {
   }
 }
 
-window.customElements.define("pip-navigation", NavigationBar);
+window.customElements.define("pip-min-navigation", MinimalNavigationBar);

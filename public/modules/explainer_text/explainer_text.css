@@ -11,6 +11,13 @@
   /* background-color: #f6f6f6; */
   color: black;
 }
+.noBackground {
+  background-color: #f0f0f000;
+
+  font-weight: bolder;
+  /* background-color: #f6f6f6; */
+  color: black;
+}
 
 .text-container {
   font-size: 0.85rem;

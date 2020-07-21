@@ -27,10 +27,29 @@
   flex-direction: row;
   justify-content: space-between;
 
-  padding-left: 1%;
-  padding-right: 1%;
+  padding-left: 2%;
+  padding-right: 2%;
   margin-top: 20px;
   margin-bottom: 10px;
+}
+.site-details {
+  display: flex;
+  flex-direction: row;
+}
+
+.site-details .icon-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.site-details .icon-container a {
+  width: 50px;
+  height: 50px;
+}
+
+.site-details .icon-container a svg {
+  width: 25px;
+  height: 25px;
 }
 /* 
     Screen Resolutions Fix
@@ -63,6 +82,12 @@
   }
   .container .footer-details div {
     margin-bottom: 10px;
+  }
+
+  .site-details {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
   }
 }
 
