@@ -5,7 +5,7 @@ class Header extends HTMLElement {
     this.template = `
        <div class="text"> 
           <div> Careers  </div>
-          <div> at Boldare  </div>
+          <div> at STAQS  </div>
        </div>
         <div class="first-image"> </div>
         <div class="second-image"> </div>

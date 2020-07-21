@@ -1,10 +1,11 @@
-class ExplainerText extends HTMLElement {
+class ExplainerImageLink extends HTMLElement {
   constructor() {
     super();
 
     this.template = `
-        <span class = "title">This is the Text </span>
-        <span class = "description">This is the Text </span>
+        <span class = "description">This is the Text
+        </span>
+       
         `;
   }
 
@@ -31,31 +32,41 @@ class ExplainerText extends HTMLElement {
     if (theme === "dark") {
       console.log("Theme Dark");
       container.classList.add("dark");
-    } else if (theme === "white") {
+    } else {
       console.log("Theme White");
       container.classList.add("white");
-    } else {
-      console.log("Theme None");
-      container.classList.add("noBackground");
     }
 
     //append HTML Template to container
     container.innerHTML = this.template;
     //Load Stylesheet this way
     var preloadLink = document.createElement("link");
-    preloadLink.href = "/modules/explainer_text/explainer_text.css";
+    preloadLink.href = "/modules/explainer_image_link/explainer_image_link.css";
     preloadLink.rel = "stylesheet";
     this.shadowRoot.appendChild(preloadLink);
 
     //create a handler for description
-    let title = `Work`;
-    let des = `You are about to join the place where +130 creative minds get along well,
-         live and breathe with design and tech, mountain bike, 
-         do yoga and travel the world together, but first -
-          work with passion to build stunning digital products!`;
 
-    container.querySelector(".title").textContent = title;
+    let des = `You are about to join the place where +130 creative minds get along well,`;
+
+    // container.querySelector(".title").textContent = title;
     container.querySelector(".description").textContent = des;
+    let svgImg = document.createElement("span");
+    svgImg.innerHTML = `<svg class="icon"><use xlink:href="/svgs/icons.svg#icon-arrow-right"></svg> `;
+    container.querySelector(".description").appendChild(svgImg);
+    container.querySelector("svg").style.width = "34px";
+    container.querySelector("svg").style.height = "20px";
+    container.querySelector("svg").style.padding = "px 0px 0px 10px";
+    container.querySelector("svg").style.objectFit = "contain";
+    container.querySelector("svg").style.objectPosition = "cover";
+
+    // container.addEventListener("mouseover", (evt) => {
+    //   container.classList.add("anim-pan-in");
+    // });
+
+    // container.addEventListener("mouseleave", (evt) => {
+    //   container.classList.remove("anim-pan-in");
+    // });
   }
 
   disconnectedCallback() {}
@@ -69,4 +80,4 @@ class ExplainerText extends HTMLElement {
   }
 }
 
-window.customElements.define("pip-explainer-txt", ExplainerText);
+window.customElements.define("pip-explainer-img-link", ExplainerImageLink);

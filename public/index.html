@@ -24,23 +24,23 @@
     <br />
     <br />
     <pip-explainer-txt theme="white"></pip-explainer-txt>
-    <navigator-pager
-      description-arrow-button="true"
-      backdrop="true"
-    ></navigator-pager>
+    <!-- <navigator-pager
+      description-arrow-button="false"
+      backdrop="false"
+    ></navigator-pager> -->
     <br />
     <br />
-    <pip-header theme="dark"></pip-header>
 
-    <pip-after-header></pip-after-header>
-
-    <navigator-pager backdrop="false"></navigator-pager>
-    <br />
-    <br />
+    <!-- <navigator-pager backdrop="false"></navigator-pager> -->
     <br />
     <br />
     <pip-explainer-img></pip-explainer-img>
-    <div class="pager"></div>
+
+    <br />
+    <br />
+    <pip-minimal-footer></pip-minimal-footer>
+    <!-- <div class="pager"></div> -->
+
     <style>
       * {
         z-index: 0;
@@ -54,23 +54,5 @@
         background-color: teal;
       }
     </style>
-
-    <script>
-      let data = {
-        name: "John",
-        image: "https://unsplash.com/photos/4TVbbaNAw9Q",
-      };
-      let elem = document.createElement("my-tag");
-      elem.setAttribute("data", JSON.stringify(data));
-
-      document.querySelector("body").appendChild(elem);
-
-      setInterval(() => {
-        data.name = "" + Math.random();
-        elem.setAttribute("data", JSON.stringify(data));
-      }, 1000);
-
-      function name(params) {}
-    </script>
   </body>
 </html>
