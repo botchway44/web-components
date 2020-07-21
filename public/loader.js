@@ -9,7 +9,7 @@ import "/modules/simple_button/simple_button.js";
 import "/modules/flexible_container/flexible_container.js";
 import "/modules/diagonal_explainer/diagonal_explainer.js";
 import "/modules/navigator_pager/navigator_pager.js";
-
+import "/modules/explainer_image_link/explainer_image_link.js";
 import "/modules/minimal_navigation_bar/minimal_navigation_bar.js";
 
 import "/modules/header/header.js";

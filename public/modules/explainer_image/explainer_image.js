@@ -2,9 +2,30 @@ class ExplainerImage extends HTMLElement {
   constructor() {
     super();
 
+    //Has a container Wrapper
     this.template = `
-        <span class = "description">This is the Text
-        </span>
+
+        <div class="description-container">
+              <div class="text-description"> 
+                  <div class="title">Software STAQS </div>
+                  <div class="description"> As Frank Sinatra said, “if I can make it there, I can make it anywhere.” While our roots are in central Ghana, part of us belongs to the Southern. Between hosting Staqs workshops in Accra to teaching our process to some of the biggest agencies in the world, our Accra team is growing in size and services. With our  presence, we help clients take a big bite out of the Big Apple. </div>
+                  
+                  <br>
+
+                  <div >
+                    <div> Accra, Ghana </div>
+                    <div> +233 2466 92602 </div>
+                  </div>
+              </div>
+
+              <div class="image-container"> 
+                <img src="https://www.rootstrap.com/img/locations/rootstrap-locations-new-york.jpg" />
+              </div>
+        </div>
+       
+        <div class="backdrop">
+          
+        </div>
        
         `;
   }
@@ -24,7 +45,7 @@ class ExplainerImage extends HTMLElement {
 
     //Create Container Element
     let container = document.createElement("div");
-    container.classList.add("text-container");
+    container.classList.add("container");
     this.shadowRoot.appendChild(container);
 
     //Check Theme
@@ -45,20 +66,19 @@ class ExplainerImage extends HTMLElement {
     preloadLink.rel = "stylesheet";
     this.shadowRoot.appendChild(preloadLink);
 
+    var position = this.getAttribute("position"); // -> "Hello World"
+    if (
+      position === "reverse" ||
+      position === "Reverse" ||
+      position === "REVERSE"
+    ) {
+      container.querySelector(".description-container").classList.add("left");
+      container.querySelector(".backdrop").style.left = "0px";
+    } else {
+      container.querySelector(".description-container").classList.add("right");
+      container.querySelector(".backdrop").style.right = "0px";
+    }
     //create a handler for description
-
-    let des = `You are about to join the place where +130 creative minds get along well,`;
-
-    // container.querySelector(".title").textContent = title;
-    container.querySelector(".description").textContent = des;
-    let svgImg = document.createElement("span");
-    svgImg.innerHTML = `<svg class="icon"><use xlink:href="/svgs/icons.svg#icon-arrow-right"></svg> `;
-    container.querySelector(".description").appendChild(svgImg);
-    container.querySelector("svg").style.width = "34px";
-    container.querySelector("svg").style.height = "20px";
-    container.querySelector("svg").style.padding = "px 0px 0px 10px";
-    container.querySelector("svg").style.objectFit = "contain";
-    container.querySelector("svg").style.objectPosition = "cover";
 
     // container.addEventListener("mouseover", (evt) => {
     //   container.classList.add("anim-pan-in");

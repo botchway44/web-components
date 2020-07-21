@@ -9,7 +9,7 @@ class AfterHeader extends HTMLElement {
         
             <div class="description"> Here, you change the way people use technology. So, let's step into the world where digital products not only work but also matter to the world, where you pave the way to your own achievements and where excellent team vibes can’t be faked. </div>
            
-            <div class="sub-description"> Feels like home? We bet it does. Take your chances and join #BoldareTeam! </div>
+            <div class="sub-description"> Feels like home? We bet it does. Take your chances and join #StaqTeam! </div>
             </div>
         `;
   }

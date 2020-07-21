@@ -1,93 +1,60 @@
 .dark {
   /* background-color: #242424; */
-  /* background-color: #17313b; */
+  background-color: #17313b;
   color: white;
 }
 
 .white {
-  /* background-color: #f0f0f0; */
+  background-color: #f0f0f0;
 
   font-weight: bolder;
   /* background-color: #f6f6f6; */
   color: black;
 }
 
-.left {
-  display: flex;
-  flex-direction: row-reverse;
-}
-
-.right {
-  display: flex;
-}
-
-.container {
+.text-container {
   font-size: 0.85rem;
-  font-family: "Raleway", sans-serif;
+  font-family: "Reem Kufi", sans-serif;
+  /* font-weight: bolder; */
+  /* color: rgba(0, 0, 0, 0.411); */
 
   display: flex;
   flex-direction: column;
 
+  /* padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 100px; */
   min-height: max-content;
-  height: 70vh;
-
+  height: 400px;
+  /* background-color: #f6f6f6; */
+  background-image: url("https://engineering.stanford.edu/sites/default/files/styles/full-width-banner-short/public/get-involved_banner_03.jpg?itok=0uYNj70D");
+  background-position: center top;
+  background-size: cover;
   position: relative;
 }
 
-.backdrop {
-  background-color: #feeae3;
-  height: 100%;
-  width: 17%;
+.text-container .description {
+  /* width: 45vw; */
+  font-size: 1.22rem;
+  line-height: 1.92rem;
+  /* font-family: Nexa; */
+  /* font-weight: bold; */
+  /* font-family: Nexa; */
+  /* color: rgba(0, 0, 0, 0.493); */
+
   position: absolute;
   right: 0px;
-  z-index: -1;
-}
-
-.container .description-container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-}
-
-.container .description-container .text-description {
-  width: 50%;
-  height: 100%;
-  /* background-color: aquamarine; */
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-
-  line-height: 2.1rem;
-  padding-top: 6%;
-}
-.container .description-container .text-description .title {
-  font-size: 1.502rem;
-}
-
-.container .description-container .text-description .description {
-  font-size: 1.02rem;
-  font-weight: lighter;
-}
-
-.container .description-container .text-description div {
-  width: 70%;
-}
-
-.container .description-container .image-container {
-  height: 70%;
-  width: 47%;
+  bottom: 0;
+  /* bottom: 0px; */
   background-color: #ffbd54;
-  margin-left: 2%;
-  margin-right: 1%;
-  margin-top: 50px;
-}
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 10px;
+  margin-bottom: 2%;
 
-.container .description-container .image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+  display: flex;
+  flex-direction: row;
 }
 
 /* 
@@ -107,59 +74,26 @@
 }
 @media only screen and (max-device-width: 480px), (max-width: 1200px) {
   /* styles for mobile browsers smaller than 480px; (iPhone) */
+  .text-container {
+    background-position: center;
+    background-size: cover;
+    position: none;
+  }
 
-  .container {
-    font-size: 0.85rem;
+  .text-container .description {
+    /* width: 100%; */
+    font-size: 0.862rem;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+    position: none;
+  }
 
+  .text-container .description span {
     display: flex;
-    flex-direction: column;
-
-    /* min-height: max-content; */
-    height: fit-content;
-
-    position: relative;
-  }
-
-  .backdrop {
-    background-color: #feeae3;
-    height: 50%;
-    width: 100%;
-    position: absolute;
-    right: 0px;
-    z-index: -1;
-  }
-
-  .container .description-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column-reverse;
-  }
-
-  .container .description-container .image-container {
-    height: 200px;
-    width: 95%;
-    background-color: #ffbd54;
-    margin-left: 2%;
-    margin-right: 1%;
-    margin-top: 50px;
-  }
-
-  .container .description-container .text-description {
-    width: 100%;
-    height: fit-content;
-    /* background-color: aquamarine; */
-    display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    flex-direction: column;
-
-    line-height: 2.1rem;
-    padding-top: 6%;
-  }
-
-  .container .description-container .text-description div {
-    width: 80%;
   }
 }
 @media only screen and (device-width: 768px) {
