@@ -1,0 +1,80 @@
+:host {
+  z-index: 999999 !important;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* background-color: #242424; */
+  /* background-color: #17313b; */
+  /* height: 30vh; */
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+
+  font-family: "Reem Kufi";
+}
+
+.container .grid-item {
+  width: 50%;
+  height: 400px;
+  display: flex;
+  /* background-color: black; */
+}
+
+.container .grid-item .text,
+.container .grid-item .image {
+  width: 50%;
+  height: 100%;
+}
+.container .grid-item .text {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.container .grid-item .text div {
+  width: 90%;
+  width: auto;
+  height: auto;
+}
+.container .grid-item .image {
+  background-image: url("https://images.ctfassets.net/3cttzl4i3k1h/1Q3n2li0qqOPI8Dfcq7cfX/a409060835b8860846e3d994f7b57263/WTDurhamDay30520_2.jpg?w=719&h=487&q=80&fm=&f=&fit=fill");
+  background-position: center;
+  background-size: cover;
+}
+
+/* default styles here for older browsers. 
+       I tend to go for a 600px - 960px width max but using percentages
+    */
+@media only screen and (min-width: 960px) {
+  /* styles for browsers larger than 960px; */
+}
+
+@media only screen and (min-width: 1440px) {
+  /* styles for browsers larger than 1440px; */
+}
+@media only screen and (min-width: 2000px) {
+  /* for sumo sized (mac) screens */
+}
+@media only screen and (max-device-width: 480px), (max-width: 1200px) {
+  /* styles for mobile browsers smaller than 480px; (iPhone) */
+}
+/* different techniques for iPad screening */
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* For portrait layouts only */
+  /* :host{
+        display: none;
+    } */
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* For landscape layouts only */
+
+  :host {
+    display: none;
+  }
+}

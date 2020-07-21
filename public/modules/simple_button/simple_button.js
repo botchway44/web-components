@@ -12,10 +12,18 @@ class SimpleButon extends HTMLElement {
 
     let container = document.createElement("button");
     container.classList.add("button-container");
-    this.shadowRoot.appendChild(container);
+    let link = document.createElement("a");
+
+    link.appendChild(container);
+
+    this.shadowRoot.appendChild(link);
 
     let text = this.getAttribute("text") || "";
     container.textContent = text;
+
+    let route = this.getAttribute("route") || "#";
+    link.href = route;
+
     //Load Stylesheet this way
     var preloadLink = document.createElement("link");
     preloadLink.href = "/modules/simple_button/simple_button.css";

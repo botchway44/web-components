@@ -25,7 +25,7 @@ class NavigationBar extends HTMLElement {
         { name: "Services", route: "services.html" },
         { name: "Case Study", route: "case-study.html" },
         { name: "About Us", route: "about.html" },
-        { name: "Career", route: "services.html" },
+        { name: "Career", route: "career.html" },
         { name: "Blog", route: "services.html" },
         { name: "Contact", route: "services.html" },
       ],

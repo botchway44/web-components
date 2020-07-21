@@ -3,7 +3,6 @@ class MinimalFooter extends HTMLElement {
     super();
 
     this.template = `
-        <hr width="95%">
         <div class="footer-details">
             <div class="site-details">
             Software Staqs - 2020, Inc. All rights reserved.

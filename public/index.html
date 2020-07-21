@@ -30,7 +30,26 @@
     ></navigator-pager> -->
     <br />
     <br />
-
+    <div class="Buttons">
+      <pip-simple-button
+        text="Services"
+        route="services.html"
+      ></pip-simple-button>
+      <pip-simple-button
+        text="Case Study"
+        route="case-study.html"
+      ></pip-simple-button>
+      <pip-simple-button
+        theme="dark"
+        text="Career"
+        route="career.html"
+      ></pip-simple-button>
+      <pip-simple-button
+        theme="dark"
+        text="Login"
+        route="login.html"
+      ></pip-simple-button>
+    </div>
     <!-- <navigator-pager backdrop="false"></navigator-pager> -->
     <br />
     <br />
@@ -52,6 +71,19 @@
       .pager {
         height: 10vh;
         background-color: teal;
+      }
+
+      .Buttons {
+        /* width: 60%; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .Buttons pip-simple-button {
+        margin-bottom: 10px;
+        width: 90%;
       }
     </style>
   </body>
