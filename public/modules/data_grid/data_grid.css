@@ -18,9 +18,8 @@
 
 .container .grid-item {
   width: 50%;
-  height: 400px;
+  height: 350px;
   display: flex;
-  /* background-color: black; */
 }
 
 .container .grid-item .text,
@@ -29,20 +28,34 @@
   height: 100%;
 }
 .container .grid-item .text {
-  font-size: 1.5rem;
+  font-size: 1.12rem;
   font-weight: lighter;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
 }
+
+.container .grid-item .text .title {
+  font-size: 2.23rem;
+  margin-bottom: 8px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.container .grid-item .text .description {
+  font-size: 1.023rem;
+  line-height: 1.5rem;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
 .container .grid-item .text div {
   width: 90%;
   width: auto;
   height: auto;
 }
 .container .grid-item .image {
-  background-image: url("https://images.ctfassets.net/3cttzl4i3k1h/1Q3n2li0qqOPI8Dfcq7cfX/a409060835b8860846e3d994f7b57263/WTDurhamDay30520_2.jpg?w=719&h=487&q=80&fm=&f=&fit=fill");
   background-position: center;
   background-size: cover;
 }
@@ -62,7 +75,35 @@
 }
 @media only screen and (max-device-width: 480px), (max-width: 1200px) {
   /* styles for mobile browsers smaller than 480px; (iPhone) */
+  .container .grid-item {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .container .grid-item .text {
+    width: 100%;
+    /* height: 100%; */
+    height: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  .container .grid-item .image {
+    height: 220px;
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
 }
+
+/* @media (max-width: 800px) {
+  .container .grid-item {
+    width: 100%;
+    height: 350px;
+    display: flex;
+  }
+} */
 /* different techniques for iPad screening */
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
   /* For portrait layouts only */
