@@ -14,16 +14,16 @@ class IntroPager extends HTMLElement {
         </div>
 
         <div class="pager-image"> 
-        <img src="https://images.unsplash.com/photo-1486108334972-f02b6c78ba07?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" />
+        <img src="#" />
         <div class="pager-navigator">Next : </div>
          </div>
         `;
 
     this.data = [
       {
-        title: "Web and mobile development",
+        title: "Full Cycle Product Development",
         description:
-          "We design and create web and mobile apps that help reach business goals,",
+          "Staqs helps companies at each stage of the product development cycle: from ideating with a prototype, testing a product with an MVP, to finding a product-market fit and finally, scaling.",
         url:
           "https://www.boldare.com/static/95b2bbcd30e40d6edf07fe570ebbe24d/ace8e/boldare-wireframe-mock.webp",
       },
@@ -35,11 +35,18 @@ class IntroPager extends HTMLElement {
           "https://www.boldare.com/static/031979217d41fafe3c2763b57eba9d73/ace8e/mobiles.webp",
       },
       {
-        title: "Full product development",
+        title: "Development Teams",
         description:
-          "Great design not only looks good, but has significant influence on profitability.",
+          "Staq’s digital product development teams will help you conceptualize your idea, design and build the first version of your product, find a product-market fit, and develop a scalable web product.",
         url:
-          "https://www.boldare.com/static/f405365eefb6e9611a96085d7d4da3cd/ace8e/about-us-founders.webp",
+          "https://res.cloudinary.com/de4rvmslk/image/upload/f_auto,q_auto,w_1920/v1/img/teal-space.jpg",
+      },
+      {
+        title: "Product Design and Development",
+        description:
+          "Staq’s dedicated development teams build custom web and mobile apps with a focus on speed to market. We are able to deliver your digital product MVP in as little as 4-6 weeks employing the lean startup approach and agile software development.",
+        url:
+          "https://res.cloudinary.com/de4rvmslk/image/upload/f_auto,q_auto,w_1000,c_limit/v1//img/open-space-recruitment-room.jpg",
       },
     ];
 
@@ -72,14 +79,6 @@ class IntroPager extends HTMLElement {
     preloadLink.href = "/modules/intro_pager/intro_pager.css";
     preloadLink.rel = "stylesheet";
     this.shadowRoot.appendChild(preloadLink);
-
-    //create a handler for description
-    let des = `Developing a machine learning- based prototype in less than 48 hours.`;
-
-    let head = `Predictive maintenance software for wind turbines`;
-
-    container.querySelector(".description").textContent = des;
-    container.querySelector(".title").innerHTML = head;
 
     // container.querySelector('.title').addEventListener()
 
@@ -154,7 +153,11 @@ class IntroPager extends HTMLElement {
 
     //Setup pager Image
     let image_wrapper = container.querySelector(".pager-image");
+    image_wrapper.style.backgroundColor =
+      "#" + (((1 << 24) * Math.random()) | 0).toString(16);
     let image = document.createElement("img");
+    image.setAttribute("loading", "lazy");
+    // loading = "lazy";
     // image.classList.add("");
     image.src = data.url;
 

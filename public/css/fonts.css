@@ -13,6 +13,42 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap");
 
 @font-face {
+  font-family: "Odin Rounded Bold";
+  src: url("/fonts/OdinRounded-Bold.otf") format("opentype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Odin Rounded Italic";
+  src: url("/fonts/OdinRounded-BoldItalic.otf") format("opentype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Odin Rounded Light";
+  src: url("/fonts/OdinRounded-Light.otf") format("opentype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Odin Rounded Light Italic";
+  src: url("/fonts/OdinRounded-LightItalic.otf") format("opentype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Odin Rounded Regular";
+  src: url("/fonts/OdinRounded-Regular.otf") format("opentype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Odin Rounded Regular Italic";
+  src: url("/fonts/OdinRounded-RegularItalic.otf") format("opentype");
+  font-style: normal;
+}
+
+@font-face {
   font-family: Nexa;
   src: url("/fonts/NexaLight.otf") format("opentype");
   font-style: normal;

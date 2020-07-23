@@ -62,12 +62,12 @@ class NavigatorPager extends HTMLElement {
     // ];
 
     this.colors = [
-      "#e83e8c",
-      "#dc3545",
-      "#ffbd54",
-      "#007bff",
-      " #ff525c",
-      "#343a40",
+      "#46afb92d",
+      "#46afb952",
+      "#46afb952",
+      "#46afb952",
+      "#46afb952",
+      "#46afb952",
     ];
 
     this.currrentIndex = 0;
@@ -81,7 +81,6 @@ class NavigatorPager extends HTMLElement {
 
     // this.data = this.getAttribute("data"); // -> "Hello World"
     this.data = JSON.parse(this.getAttribute("data"));
-    console.log(this.data.length);
     this.count = this.data.length;
     // this.count = 3;
     // // console.log(JSON.parse(encodeURIComponent('{}')));

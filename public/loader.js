@@ -11,10 +11,11 @@ import "/modules/diagonal_explainer/diagonal_explainer.js";
 import "/modules/navigator_pager/navigator_pager.js";
 import "/modules/explainer_image_link/explainer_image_link.js";
 import "/modules/minimal_navigation_bar/minimal_navigation_bar.js";
-
+import "/modules/simple_text/simple_text.js";
 import "/modules/data_grid/data_grid.js";
 import "/modules/header/header.js";
 import "/modules/after_header/after_header.js";
 import "/modules/fixed_navigation/fixed_navigation.js";
 import "/modules/login_page/login_page.js";
 import "/modules/minimal_footer/minimal_footer.js";
+import "/modules/title/title.js";

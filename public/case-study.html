@@ -12,7 +12,11 @@
     <pip-min-navigation></pip-min-navigation>
 
     <pip-explainer-txt theme="none"></pip-explainer-txt>
+
     <div id="starting-point"></div>
+
+    <pip-explainer-txt theme="none"></pip-explainer-txt>
+    <div id="starting-point2"></div>
     <pip-minimal-footer></pip-minimal-footer>
 
     <script>
@@ -70,7 +74,8 @@
       pager1.setAttribute("backdrop", "true");
       // console.log(pager);
       // document.body.appendChild(pager);
-      startingPoint.append(pager1);
+      let startingPoint2 = document.querySelector("#starting-point2");
+      startingPoint2.append(pager1);
     </script>
   </body>
 </html>

@@ -11,11 +11,14 @@
 
 :host {
   display: block;
-  width: 100%;
+  /* width: 100%; */
 }
 
-.button-container {
+.full {
   width: 100%;
+}
+.button-container {
+  /* width: 100%; */
   height: 35px;
   color: white;
   font-family: "Josefin Sans", "Times New Roman";

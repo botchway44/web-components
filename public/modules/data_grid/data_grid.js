@@ -7,7 +7,6 @@ class DataGrid extends HTMLElement {
         `;
 
     this.data = {
-      title: "STAQS",
       items: [
         {
           title: "Core Values",
@@ -72,28 +71,15 @@ class DataGrid extends HTMLElement {
             "https://images.ctfassets.net/3cttzl4i3k1h/2RKx1BBZVeMiCIyE48GKAk/4f4a02a9b39c6ce631903652e0110153/WTDurhamDay20128__1_.jpg?w=719&h=487&q=80&fm=&f=&fit=fill",
         },
       ],
-      description:
-        "The digital product design & development company and your guide on the digital transformation journey.",
-      miniDescription: "Do you have a product in mind? <br> Get in touch.",
-      customNavElems: [
-        { customElemName: "pip-shadow-button", route: "services.html" },
-      ],
     };
   }
 
   connectedCallback() {
     this.attachShadow({ mode: "open" });
 
-    // var att = this.getAttribute("data"); // -> "Hello World"
+    this.data = JSON.parse(this.getAttribute("data"));
+    this.count = this.data.length;
 
-    // // console.log(JSON.parse(encodeURIComponent('{}')));
-    // let obj = JSON.parse(att);
-    // console.log(att);
-
-    // console.log(obj.name);
-
-    // list.setAttribute("data", "A new value");
-    // list.getAttribute("data"); // -> "A new value"
     this.container = document.createElement("div");
     this.container.classList.add("container");
     this.shadowRoot.appendChild(this.container);
@@ -105,33 +91,6 @@ class DataGrid extends HTMLElement {
     preloadLink.href = "/modules/data_grid/data_grid.css";
     preloadLink.rel = "stylesheet";
     this.shadowRoot.appendChild(preloadLink);
-
-    // let des_tag = document.createElement("div");
-    // des_tag.textContent = des;
-    // let nav_description = container.querySelector('.nav-description');
-    // nav_description.appendChild(des_tag);
-
-    window.addEventListener("load", (event) => {
-      window.addEventListener("scroll", (event) => {
-        if (this.isInViewport(this)) {
-          // console.log("In View")
-          // container.classList.add('anim-slide-right')
-          // container.style.transform = 'translate(0, -10px)';
-          // // transition: transform 500ms ease-in-out;
-          // container.style.transition = "transform 400ms ease-in-out"
-        } else {
-          // console.log("Out View")
-        }
-
-        //Make the NavBar static
-        // if (window.scrollY == 0) {
-        //   //user is at the top of the page; no need to show the back to top button
-        //   container.style.position = "relative";
-        // } else {
-        //   container.style.position = "fixed";
-        // }
-      });
-    });
 
     this.buildItems(this.data);
   }

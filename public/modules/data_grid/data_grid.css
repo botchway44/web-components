@@ -37,10 +37,12 @@
 }
 
 .container .grid-item .text .title {
-  font-size: 2.23rem;
+  font-size: 1.513rem;
   margin-bottom: 8px;
   margin-left: 10%;
   margin-right: 10%;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.664);
 }
 
 .container .grid-item .text .description {
@@ -48,6 +50,7 @@
   line-height: 1.5rem;
   margin-left: 10%;
   margin-right: 10%;
+  color: rgba(0, 0, 0, 0.541);
 }
 
 .container .grid-item .text div {
@@ -97,13 +100,6 @@
   }
 }
 
-/* @media (max-width: 800px) {
-  .container .grid-item {
-    width: 100%;
-    height: 350px;
-    display: flex;
-  }
-} */
 /* different techniques for iPad screening */
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
   /* For portrait layouts only */
@@ -114,8 +110,4 @@
 
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: landscape) {
   /* For landscape layouts only */
-
-  :host {
-    display: none;
-  }
 }

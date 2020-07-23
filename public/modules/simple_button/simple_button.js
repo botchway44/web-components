@@ -38,6 +38,12 @@ class SimpleButon extends HTMLElement {
       console.log("Theme White");
       container.id = "white";
     }
+
+    //Check if full attrubute is set fill parent
+    let fill = this.getAttribute("fill") || "child";
+    if (fill === "parent" || fill === "Parent" || fill === "PARENT") {
+      container.classList.add("full");
+    }
   }
 
   disconnectedCallback() {}
