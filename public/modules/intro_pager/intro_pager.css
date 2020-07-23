@@ -52,13 +52,13 @@
   margin-bottom: 20px;
   -webkit-font-smoothing: antialiased;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
-  color: rgba(0, 0, 0, 0.849);
+  color: rgba(0, 0, 0, 0.678);
   /* line-height: 1.5rem; */
 }
 
 .pager-container .pager-wrapper .pager-text .description {
   font-size: 1.2rem;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: lighter;
   color: rgba(0, 0, 0, 0.657);
   margin-bottom: 50px;
@@ -70,7 +70,6 @@
   height: 100%;
   width: 60%;
   right: 0px;
-  /* background-color: aqua; */
 }
 
 .pager-container .pager-image img {

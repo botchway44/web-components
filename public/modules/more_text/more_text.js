@@ -40,12 +40,10 @@ class MoreText extends HTMLElement {
 
     let theme = this.getAttribute("theme"); // -> "A new value"
     if (theme === "dark") {
-      console.log("Theme Dark");
       container.classList.add("dark");
       container.querySelector("svg").style.fill = "#000";
     } else {
       container.querySelector("svg").style.fill = "white";
-      console.log("Theme White");
       container.classList.add("white");
     }
 
@@ -59,7 +57,7 @@ class MoreText extends HTMLElement {
     // nav_description.appendChild(des_tag);
 
     this.addEventListener("mouseover", (event) => {
-      console.log("mouse entered");
+      // console.log("mouse entered");
       container
         .querySelector(".arrow-forward svg")
         .classList.remove("anim-slide-left");
@@ -69,7 +67,7 @@ class MoreText extends HTMLElement {
     });
 
     this.addEventListener("mouseout", (event) => {
-      console.log("mouse out");
+      // console.log("mouse out");
       container
         .querySelector(".arrow-forward svg")
         .classList.add("anim-slide-left");

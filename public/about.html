@@ -10,10 +10,79 @@
   </head>
   <body>
     <pip-min-navigation></pip-min-navigation>
-    <pip-header data="" theme="dark"></pip-header>
+    <div id="after-header-position"></div>
 
-    <pip-after-header></pip-after-header>
+    <!-- <pip-after-header></pip-after-header> -->
     <pip-explainer-txt theme="none"></pip-explainer-txt>
+
+    <div id="starting-point"></div>
     <pip-minimal-footer></pip-minimal-footer>
+
+    <script>
+      let data = {
+        name: "John",
+        image: "https://unsplash.com/photos/4TVbbaNAw9Q",
+      };
+      // let elem = document.createElement("my-tag");
+      // elem.setAttribute("data", JSON.stringify(data));
+
+      // document.querySelector("body").appendChild(elem);
+
+      // setInterval(() => {
+      //   data.name = "" + Math.random();
+      //   elem.setAttribute("data", JSON.stringify(data));
+      // }, 1000);
+
+      function name(params) {}
+
+      let pagerData = [
+        {
+          title: "Web and mobile development",
+          description:
+            "We design and create web and mobile apps that help reach business goals,We design and create web and mobile apps that help reach business goals,",
+          url:
+            "https://res.cloudinary.com/de4rvmslk/image/upload/f_auto,q_auto,w_1920/v1/img/teal-space.jpg",
+        },
+        {
+          title: "Product design and UX/UI",
+          description:
+            "Great design not only looks good, but has significant influence on profitability. ",
+          url:
+            "https://res.cloudinary.com/de4rvmslk/image/upload/f_auto,q_auto,w_1920/v1/img/meetup.jpg",
+        },
+      ];
+
+      let startingPoint = document.querySelector("#starting-point");
+      let pager = document.createElement("navigator-pager");
+      pager.data = JSON.stringify(pagerData);
+      pager.setAttribute("data", JSON.stringify(pagerData));
+      // console.log(pager);
+      // document.body.appendChild(pager);
+      startingPoint.append(pager);
+
+      //Create after header
+      let headData = {
+        title: "Innovation",
+        description:
+          "We set aside time weekly for our team members to explore their passions and hone their craft. Continuous learning and cool emerging ideas are the norm at Software Staqs.",
+        subDescription:
+          "Join our full time teams in all locations as we participate in weekly lunch and learn and our annual Summer Summit.",
+        styledText: "#StaqTeam!",
+        image:
+          "https://images.ctfassets.net/3cttzl4i3k1h/6kTLy1l2hwNRFTo08GO4po/f583716f1b39cf35d52ae725abfbc7ee/DSC_2817-2.jpg?w=719&h=487&q=80&fm=&f=&fit=fill",
+        customElements: [
+          {
+            tag: "pip-simple-button",
+            text: "Community",
+            route: "services.html",
+          },
+          { tag: "pip-simple-button", text: "Mentorship", route: "#" },
+        ],
+      };
+      let afterHeader = document.createElement("pip-after-header");
+      afterHeader.setAttribute("data", JSON.stringify(headData));
+
+      document.querySelector("#after-header-position").append(afterHeader);
+    </script>
   </body>
 </html>

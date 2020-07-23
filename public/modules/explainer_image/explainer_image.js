@@ -7,14 +7,13 @@ class ExplainerImage extends HTMLElement {
 
         <div class="description-container">
               <div class="text-description"> 
-                  <div class="title">Software STAQS </div>
-                  <div class="description"> As Frank Sinatra said, “if I can make it there, I can make it anywhere.” While our roots are in central Ghana, part of us belongs to the Southern. Between hosting Staqs workshops in Accra to teaching our process to some of the biggest agencies in the world, our Accra team is growing in size and services. With our  presence, we help clients take a big bite out of the Big Apple. </div>
+                  <div class="title">title </div>
+                  <div class="description">Description</div>
                   
                   <br>
 
-                  <div >
-                    <div> Accra, Ghana </div>
-                    <div> +233 2466 92602 </div>
+                  <div class="customElements">
+                  
                   </div>
               </div>
 
@@ -32,8 +31,8 @@ class ExplainerImage extends HTMLElement {
 
   connectedCallback() {
     this.attachShadow({ mode: "open" });
-
-    // var att = this.getAttribute("data"); // -> "Hello World"
+    let temp = this.getAttribute("data");
+    this.data = JSON.parse(temp) || {}; // -> "Hello World"
 
     // // console.log(JSON.parse(encodeURIComponent('{}')));
     // let obj = JSON.parse(att);
@@ -51,10 +50,10 @@ class ExplainerImage extends HTMLElement {
     //Check Theme
     let theme = this.getAttribute("theme"); // -> "A new value"
     if (theme === "dark") {
-      console.log("Theme Dark");
+      // console.log("Theme Dark");
       container.classList.add("dark");
     } else {
-      console.log("Theme White");
+      // console.log("Theme White");
       container.classList.add("white");
     }
 
@@ -78,6 +77,13 @@ class ExplainerImage extends HTMLElement {
       container.querySelector(".description-container").classList.add("right");
       container.querySelector(".backdrop").style.right = "0px";
     }
+
+    //title
+    container.querySelector(".title").innerHTML = this.data.title;
+    container.querySelector(".description").innerHTML = this.data.description;
+
+    container.querySelector(".image-container img").src = this.data.image;
+    console.log(this.data.title);
     //create a handler for description
 
     // container.addEventListener("mouseover", (evt) => {
@@ -87,6 +93,11 @@ class ExplainerImage extends HTMLElement {
     // container.addEventListener("mouseleave", (evt) => {
     //   container.classList.remove("anim-pan-in");
     // });
+
+    this.addCustomElements(
+      container.querySelector(".customElements"),
+      this.data.customElements
+    );
   }
 
   disconnectedCallback() {}
@@ -97,6 +108,15 @@ class ExplainerImage extends HTMLElement {
   attributeChangedCallback(attr, oldValue, newValue) {
     // if (attr === 'foo') this.doSomething();
     // console.log("Attribute Changed");
+  }
+
+  addCustomElements(container, data) {
+    for (const elem of data) {
+      let customElem = document.createElement(elem.tag);
+      customElem.setAttribute("text", elem.text);
+      container.appendChild(customElem);
+      // console.log(customElem);
+    }
   }
 }
 

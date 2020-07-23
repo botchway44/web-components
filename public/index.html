@@ -15,46 +15,60 @@
 
     <pip-pager></pip-pager>
 
-    <pip-explainer-txt theme="white"></pip-explainer-txt>
-
-    <pip-flexible-container> </pip-flexible-container>
-    <diagonal-explainer theme="dark"></diagonal-explainer>
+    <div id="explainer-point1"></div>
+    <div id="simple-text1"></div>
 
     <br />
     <br />
     <br />
-    <pip-explainer-txt theme="white"></pip-explainer-txt>
     <!-- <navigator-pager
       description-arrow-button="false"
       backdrop="false"
     ></navigator-pager> -->
     <br />
     <br />
+
+    <pip-title text="Check these pages out" position="left"></pip-title>
     <div class="Buttons">
       <pip-simple-button
         text="Services"
         route="services.html"
       ></pip-simple-button>
       <pip-simple-button
+        theme="dark"
         text="Case Study"
         route="case-study.html"
       ></pip-simple-button>
-      <pip-simple-button
-        theme="dark"
-        text="Career"
-        route="career.html"
-      ></pip-simple-button>
+      <pip-simple-button text="Career" route="career.html"></pip-simple-button>
       <pip-simple-button
         theme="dark"
         text="Login"
         route="login.html"
       ></pip-simple-button>
+
+      <pip-simple-button
+        text="Contact"
+        route="contact.html"
+      ></pip-simple-button>
+
+      <pip-simple-button
+        theme="dark"
+        text="About"
+        route="about.html"
+      ></pip-simple-button>
     </div>
     <!-- <navigator-pager backdrop="false"></navigator-pager> -->
     <br />
     <br />
-    <pip-explainer-img></pip-explainer-img>
-
+    <div id="explainer-point2"></div>
+    <br />
+    <br />
+    <!-- <pip-title
+      id="no-margin"
+      text="You are never left out"
+      position="left"
+    ></pip-title> -->
+    <div id="grid-location"></div>
     <br />
     <br />
     <pip-minimal-footer></pip-minimal-footer>
@@ -77,14 +91,137 @@
         /* width: 60%; */
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        /* justify-content: center; */
+        /* align-items: center; */
+        margin-left: 10%;
+        margin-right: 10%;
       }
 
       .Buttons pip-simple-button {
         margin-bottom: 10px;
-        width: 90%;
+      }
+
+      pip-simple-txt,
+      pip-explainer-img {
+        margin-top: 10vh;
+        margin-bottom: 20vh;
+      }
+
+      pip-title {
+        margin-left: 10%;
+        margin-right: 10%;
+      }
+
+      #no-margin {
+        margin-left: 0%;
+        margin-right: 0%;
       }
     </style>
+
+    <script>
+      let data = {
+        items: [
+          {
+            title: "More Than a Resume Builder",
+            description:
+              "We provide our interns and new grads the freedom to step outside of the classroom and learn through action by working on significant projects.",
+            image:
+              "https://images.ctfassets.net/3cttzl4i3k1h/2zLUDzuvZFdYG00zF34UER/24e5057f168d98fe058c16530ed245f5/DurhamOfficeDay10042.jpg?w=719&h=487&q=80&fm=&f=&fit=fill",
+          },
+
+          {
+            title: "Mentorship",
+            description:
+              "Learn from Trees of all skill levels in an environment where your growth is the most important thing.",
+            image:
+              "https://images.ctfassets.net/3cttzl4i3k1h/5EadC5vIHgHJWupnJJgNPX/62cfa731019ab68aa578c7917ca27730/DSC_3421.jpg?w=719&h=487&q=80&fm=&f=&fit=fill",
+          },
+
+          {
+            title: "Real Client Work",
+            description:
+              "Experience is the best teacher, so no intern specific projects here! Join our full time teams in creating products for real clients.",
+            image:
+              "https://images.ctfassets.net/3cttzl4i3k1h/52mboJXNeMoKbwQ8zcJurz/ad1b4cefe2b50a1f213d717df52db6bd/DSC_3393.jpg?w=719&h=487&q=80&fm=&f=&fit=fill",
+          },
+
+          {
+            title: "Community",
+            description:
+              "Gather for weekly intern lunches, escape rooms, movie/game nights, hikes, service projects and more to connect with other interns.",
+            image:
+              "https://images.ctfassets.net/3cttzl4i3k1h/6kTLy1l2hwNRFTo08GO4po/f583716f1b39cf35d52ae725abfbc7ee/DSC_2817-2.jpg?w=719&h=487&q=80&fm=&f=&fit=fill",
+          },
+
+          {
+            title: "Company Learning",
+            description:
+              "Join our full time teams in all locations as we participate in weekly lunch and learn and our annual Summer Summit.",
+            image:
+              "https://images.ctfassets.net/3cttzl4i3k1h/4glA8cCstH4VWOBIx6FFTP/0dd19db23d3be2338ccc99b075e0bdb5/DSC_3466.jpg?w=719&h=487&q=80&fm=&f=&fit=fill",
+          },
+          {
+            title: "Innovation",
+            description:
+              "We set aside time weekly for our team members to explore their passions and hone their craft. Continuous learning and cool emerging ideas are the norm at Staqs.",
+            image:
+              "https://images.ctfassets.net/3cttzl4i3k1h/FZX2MIfd68W30ErcSQoAk/69ce62b2accca71435ee760d3cefeccf/DSC_3551.jpg?w=719&h=487&q=80&fm=&f=&fit=fill",
+          },
+        ],
+      };
+
+      let dataGrid = document.createElement("pip-data-grid");
+      dataGrid.setAttribute("data", JSON.stringify(data));
+      document.querySelector("#grid-location").appendChild(dataGrid);
+
+      //create explainer image
+      let explainerData = {
+        title: "Software STAQS ",
+        description:
+          " As Frank Sinatra said, “if I can make it there, I can make it anywhere.” While our roots are in central Ghana, part of us belongs to the Southern. Between hosting Staqs workshops in Accra to teaching our process to some of the biggest agencies in the world, our Accra team is growing in size and services. With our  presence, we help clients take a big bite out of the Big Apple. ",
+        image:
+          "https://www.rootstrap.com/img/locations/rootstrap-locations-new-york.jpg",
+
+        backdropColor: "",
+        customElements: [
+          { tag: "pip-text", text: "Accra Ghana" },
+          { tag: "pip-text", text: "+233 2466 92602" },
+        ],
+      };
+
+      let explainer1 = document.createElement("pip-explainer-img");
+      explainer1.setAttribute("data", JSON.stringify(explainerData));
+      document.querySelector("#explainer-point2").append(explainer1);
+
+      //create explainer image
+      let explainerData2 = {
+        title: "Starting Point ",
+        description:
+          " As Frank Sinatra said, “if I can make it there, I can make it anywhere.” While our roots are in central Ghana, part of us belongs to the Southern. Between hosting Staqs workshops in Accra to teaching our process to some of the biggest agencies in the world, our Accra team is growing in size and services. With our  presence, we help clients take a big bite out of the Big Apple. ",
+        // image: "https://www.rootstrap.com/img/locations/rootstrap-locations-new-york.jpg",
+        image:
+          "https://images.ctfassets.net/3cttzl4i3k1h/1m7wi6y94IxG15v5bNJgJB/4e5f2318a4b75beff1ed06e445ad9686/CS_Wyndham_Image_4_Container.jpg?w=&h=&q=80&fm=&f=",
+        backdropColor: "",
+        customElements: [
+          { tag: "pip-text", text: "Accra Ghana" },
+          { tag: "pip-text", text: "+233 2466 92602" },
+        ],
+      };
+
+      let explainer2 = document.createElement("pip-explainer-img");
+      explainer2.setAttribute("data", JSON.stringify(explainerData2));
+      explainer2.setAttribute("position", "reverse");
+      document.querySelector("#explainer-point1").append(explainer2);
+
+      // Simple Text
+      let textData = {
+        title: "",
+        description:
+          "Continuing its commitment to digital innovation, Staq’s decided to redesign the company’s robust POS from the ground up, with an eye toward delivering a more modern, user-friendly experience. Together we pioneered greenfield design concepts that furthered Staq’s advantage by creating a system that increases team member efficiency, reduces user errors, and speeds time to mastery for new team members.",
+      };
+      let simpleText1 = document.createElement("pip-simple-txt");
+      simpleText1.setAttribute("data", JSON.stringify(textData));
+      document.querySelector("#simple-text1").append(simpleText1);
+    </script>
   </body>
 </html>

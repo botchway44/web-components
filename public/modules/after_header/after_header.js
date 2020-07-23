@@ -10,6 +10,7 @@ class AfterHeader extends HTMLElement {
             <div class="description"> Here, you change the way people use technology. So, let's step into the world where digital products not only work but also matter to the world, where you pave the way to your own achievements and where excellent team vibes can’t be faked. </div>
            
             <div class="sub-description"> Feels like home? We bet it does. Take your chances and join #StaqTeam! </div>
+            <div class="customElements"> </div>
             </div>
         `;
   }
@@ -17,7 +18,7 @@ class AfterHeader extends HTMLElement {
   connectedCallback() {
     this.attachShadow({ mode: "open" });
 
-    // var att = this.getAttribute("data"); // -> "Hello World"
+    this.data = JSON.parse(this.getAttribute("data")) || {}; // -> "Hello World"
 
     // // console.log(JSON.parse(encodeURIComponent('{}')));
     // let obj = JSON.parse(att);
@@ -50,8 +51,37 @@ class AfterHeader extends HTMLElement {
       console.log("Theme White");
       container.classList.add("white");
     }
+
+    container.querySelector(".title").innerHTML = this.data.title;
+    container.querySelector(".description").innerHTML = this.data.description;
+    container.querySelector(
+      ".image"
+    ).style.backgroundImage = `url(${this.data.image})`;
+    container.querySelector(
+      ".sub-description"
+    ).innerHTML = this.data.subDescription;
+
+    let styled = document.createElement("div");
+    styled.classList.add("styled");
+    styled.innerHTML = this.data.styledText;
+    container.querySelector(".sub-description").appendChild(styled);
+
+    //add custom Buttons
+    if (this.data.customElements) {
+      this.styleCustomElements(container, this.data.customElements);
+    }
   }
 
+  styleCustomElements(container, data) {
+    let wrapper = container.querySelector(".customElements");
+    for (const elem of data) {
+      let customTag = document.createElement(elem.tag);
+      let title = elem.title || elem.text || "";
+      customTag.setAttribute("text", title);
+      customTag.setAttribute("route", elem.route);
+      wrapper.appendChild(customTag);
+    }
+  }
   disconnectedCallback() {}
 
   static get observedAttributes() {

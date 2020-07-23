@@ -12,10 +12,112 @@
     <pip-min-navigation></pip-min-navigation>
     <pip-header data="" theme="dark"></pip-header>
 
-    <pip-after-header></pip-after-header>
+    <!-- <pip-after-header></pip-after-header> -->
+    <div id="after-header-position"></div>
+
     <pip-explainer-txt theme="none"></pip-explainer-txt>
 
-    <pip-data-grid></pip-data-grid>
+    <pip-flexible-container> </pip-flexible-container>
+    <diagonal-explainer theme="dark"></diagonal-explainer>
+
+    <div id="grid-location"></div>
+
     <pip-minimal-footer></pip-minimal-footer>
+
+    <style>
+      #grid-location {
+        margin-top: 20vh;
+      }
+    </style>
+
+    <script>
+      let data = {
+        items: [
+          {
+            title: "Core Values",
+            description:
+              "We have lots of fun doing work we love—and these tenets drive everything we do.",
+            image:
+              "https://images.ctfassets.net/3cttzl4i3k1h/1Q3n2li0qqOPI8Dfcq7cfX/a409060835b8860846e3d994f7b57263/WTDurhamDay30520_2.jpg?w=719&h=487&q=80&fm=&f=&fit=fill",
+          },
+
+          {
+            title: "Craft",
+            description:
+              "The state of mind when time flies and energy is focused. We make time for it every day so we can create innovative solutions that people love.",
+            image:
+              "https://images.ctfassets.net/3cttzl4i3k1h/4899xEBlnWM4gI66SEoO46/ee69fae2ee24a45da50a2ff620384c3f/Screen_Shot_2019-08-13_at_3_07_42_PM_1.jpg?w=719&h=487&q=80&fm=&f=&fit=fill",
+          },
+
+          {
+            title: "Sustainable Flow",
+            description:
+              "We have a strong sense of individual responsibility. Every initiative has an owner, from major product strategy to curating which kombucha is on tap.",
+            image:
+              "https://images.ctfassets.net/3cttzl4i3k1h/UO6d8CwlyeyY8OqUGMi48/ce8061aa0fbb3af9dcda718da6acc88d/IMG_6867.jpg?w=719&h=487&q=80&fm=&f=&fit=fill",
+          },
+
+          {
+            title: "Ownership",
+            description:
+              "We have a strong sense of individual responsibility. Every initiative has an owner, from major product strategy to curating which kombucha is on tap.",
+            image:
+              "https://images.ctfassets.net/3cttzl4i3k1h/4e9bbzyPawQsqGEUO2gyi6/25557be7051256a202e5a528e14049fc/WTDurhamDay30502.jpg?w=719&h=487&q=80&fm=&f=&fit=fill",
+          },
+
+          {
+            title: "Optimism",
+            description:
+              "We acknowledge and understand the reality of the challenges we face, and we always find a way forward.",
+            image:
+              "https://images.ctfassets.net/3cttzl4i3k1h/5xISyahZJe4kyAsUwaOmQa/9da63f39f20a8d65938a9e2af48ed27d/IMG_4058-153.jpg?w=719&h=487&q=80&fm=&f=&fit=fill",
+          },
+          {
+            title: "Partnership",
+            description:
+              "We acknowledge and understand the reality of the challenges we face, and we always find a way forward.",
+            image:
+              "https://images.ctfassets.net/3cttzl4i3k1h/5Q8qsKlGLY4sIuywUeyWQU/a9554b8d0eb57ba5fa835f815e0e7b8f/WTDurhamDay20842__1_.jpg?w=719&h=487&q=80&fm=&f=&fit=fill",
+          },
+
+          {
+            title: "Open Communication",
+            description:
+              "We have a strong sense of individual responsibility. Every initiative has an owner, from major product strategy to curating which kombucha is on tap.",
+            image:
+              "https://images.ctfassets.net/3cttzl4i3k1h/RN5MHzmkeIEwYqQAO20oq/0f9b48c6c1447664baec42612decba9c/WTDurhamDay30547.jpg?w=719&h=487&q=80&fm=&f=&fit=fill",
+          },
+
+          {
+            title: "Inclusion",
+            description:
+              "We acknowledge and understand the reality of the challenges we face, and we always find a way forward.",
+            image:
+              "https://images.ctfassets.net/3cttzl4i3k1h/2RKx1BBZVeMiCIyE48GKAk/4f4a02a9b39c6ce631903652e0110153/WTDurhamDay20128__1_.jpg?w=719&h=487&q=80&fm=&f=&fit=fill",
+          },
+        ],
+      };
+
+      let dataGrid = document.createElement("pip-data-grid");
+      dataGrid.setAttribute("data", JSON.stringify(data));
+      document.querySelector("#grid-location").appendChild(dataGrid);
+
+      //Create after header
+      let headData = {
+        title: "Here, you’re not “just” a developer or a designer!",
+        description:
+          "Here, you change the way people use technology. So, let's step into the world where digital products not only work but also matter to the world, where you pave the way to your own achievements and where excellent team vibes can’t be faked.",
+        subDescription:
+          "Feels like home? We bet it does. Take your chances and join ",
+        styledText: "#StaqTeam!",
+        image:
+          "https://res.cloudinary.com/de4rvmslk/image/upload/f_auto,q_auto,w_auto/v1/gatsby-cloudinary/Development-Teams-rocket.png",
+        customElements: [],
+      };
+      let afterHeader = document.createElement("pip-after-header");
+      afterHeader.setAttribute("data", JSON.stringify(headData));
+
+      document.querySelector("#after-header-position").append(afterHeader);
+    </script>
   </body>
 </html>

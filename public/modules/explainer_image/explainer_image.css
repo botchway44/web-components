@@ -1,3 +1,7 @@
+:host {
+  display: block;
+}
+
 .dark {
   /* background-color: #242424; */
   /* background-color: #17313b; */
