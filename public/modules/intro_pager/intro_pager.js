@@ -156,7 +156,7 @@ class IntroPager extends HTMLElement {
     image_wrapper.style.backgroundColor =
       "#" + (((1 << 24) * Math.random()) | 0).toString(16);
     let image = document.createElement("img");
-    image.setAttribute("loading", "lazy");
+    // image.setAttribute("loading", "lazy");
     // loading = "lazy";
     // image.classList.add("");
     image.src = data.url;

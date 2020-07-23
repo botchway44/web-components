@@ -15,8 +15,8 @@
 
     <pip-pager></pip-pager>
 
-    <pip-explainer-img position="reverse"></pip-explainer-img>
-    <pip-simple-txt></pip-simple-txt>
+    <div id="explainer-point1"></div>
+    <div id="simple-text1"></div>
 
     <br />
     <br />
@@ -35,24 +35,32 @@
         route="services.html"
       ></pip-simple-button>
       <pip-simple-button
+        theme="dark"
         text="Case Study"
         route="case-study.html"
       ></pip-simple-button>
-      <pip-simple-button
-        theme="dark"
-        text="Career"
-        route="career.html"
-      ></pip-simple-button>
+      <pip-simple-button text="Career" route="career.html"></pip-simple-button>
       <pip-simple-button
         theme="dark"
         text="Login"
         route="login.html"
       ></pip-simple-button>
+
+      <pip-simple-button
+        text="Contact"
+        route="contact.html"
+      ></pip-simple-button>
+
+      <pip-simple-button
+        theme="dark"
+        text="About"
+        route="about.html"
+      ></pip-simple-button>
     </div>
     <!-- <navigator-pager backdrop="false"></navigator-pager> -->
     <br />
     <br />
-    <pip-explainer-img></pip-explainer-img>
+    <div id="explainer-point2"></div>
     <br />
     <br />
     <!-- <pip-title
@@ -165,6 +173,55 @@
       let dataGrid = document.createElement("pip-data-grid");
       dataGrid.setAttribute("data", JSON.stringify(data));
       document.querySelector("#grid-location").appendChild(dataGrid);
+
+      //create explainer image
+      let explainerData = {
+        title: "Software STAQS ",
+        description:
+          " As Frank Sinatra said, “if I can make it there, I can make it anywhere.” While our roots are in central Ghana, part of us belongs to the Southern. Between hosting Staqs workshops in Accra to teaching our process to some of the biggest agencies in the world, our Accra team is growing in size and services. With our  presence, we help clients take a big bite out of the Big Apple. ",
+        image:
+          "https://www.rootstrap.com/img/locations/rootstrap-locations-new-york.jpg",
+
+        backdropColor: "",
+        customElements: [
+          { tag: "pip-text", text: "Accra Ghana" },
+          { tag: "pip-text", text: "+233 2466 92602" },
+        ],
+      };
+
+      let explainer1 = document.createElement("pip-explainer-img");
+      explainer1.setAttribute("data", JSON.stringify(explainerData));
+      document.querySelector("#explainer-point2").append(explainer1);
+
+      //create explainer image
+      let explainerData2 = {
+        title: "Starting Point ",
+        description:
+          " As Frank Sinatra said, “if I can make it there, I can make it anywhere.” While our roots are in central Ghana, part of us belongs to the Southern. Between hosting Staqs workshops in Accra to teaching our process to some of the biggest agencies in the world, our Accra team is growing in size and services. With our  presence, we help clients take a big bite out of the Big Apple. ",
+        // image: "https://www.rootstrap.com/img/locations/rootstrap-locations-new-york.jpg",
+        image:
+          "https://images.ctfassets.net/3cttzl4i3k1h/1m7wi6y94IxG15v5bNJgJB/4e5f2318a4b75beff1ed06e445ad9686/CS_Wyndham_Image_4_Container.jpg?w=&h=&q=80&fm=&f=",
+        backdropColor: "",
+        customElements: [
+          { tag: "pip-text", text: "Accra Ghana" },
+          { tag: "pip-text", text: "+233 2466 92602" },
+        ],
+      };
+
+      let explainer2 = document.createElement("pip-explainer-img");
+      explainer2.setAttribute("data", JSON.stringify(explainerData2));
+      explainer2.setAttribute("position", "reverse");
+      document.querySelector("#explainer-point1").append(explainer2);
+
+      // Simple Text
+      let textData = {
+        title: "",
+        description:
+          "Continuing its commitment to digital innovation, Staq’s decided to redesign the company’s robust POS from the ground up, with an eye toward delivering a more modern, user-friendly experience. Together we pioneered greenfield design concepts that furthered Staq’s advantage by creating a system that increases team member efficiency, reduces user errors, and speeds time to mastery for new team members.",
+      };
+      let simpleText1 = document.createElement("pip-simple-txt");
+      simpleText1.setAttribute("data", JSON.stringify(textData));
+      document.querySelector("#simple-text1").append(simpleText1);
     </script>
   </body>
 </html>

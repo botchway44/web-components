@@ -11,29 +11,24 @@
   <body>
     <pip-min-navigation></pip-min-navigation>
 
+    <div id="after-header-position"></div>
+    <!-- <pip-after-header></pip-after-header> -->
     <pip-explainer-txt theme="none"></pip-explainer-txt>
 
     <div id="starting-point"></div>
 
-    <pip-explainer-txt theme="none"></pip-explainer-txt>
+    <div id="simple-text1"></div>
     <div id="starting-point2"></div>
     <pip-minimal-footer></pip-minimal-footer>
 
+    <style>
+      pip-simple-txt {
+        margin-top: 20vh;
+        margin-bottom: 20vh;
+      }
+    </style>
+
     <script>
-      let data = {
-        name: "John",
-        image: "https://unsplash.com/photos/4TVbbaNAw9Q",
-      };
-      // let elem = document.createElement("my-tag");
-      // elem.setAttribute("data", JSON.stringify(data));
-
-      // document.querySelector("body").appendChild(elem);
-
-      // setInterval(() => {
-      //   data.name = "" + Math.random();
-      //   elem.setAttribute("data", JSON.stringify(data));
-      // }, 1000);
-
       function name(params) {}
 
       let pagerData = [
@@ -49,14 +44,14 @@
           description:
             "Great design not only looks good, but has significant influence on profitability. ",
           url:
-            "https://www.boldare.com/static/031979217d41fafe3c2763b57eba9d73/ace8e/mobiles.webp",
+            "https://images.ctfassets.net/3cttzl4i3k1h/4xQPb0Bd176mKZQizUCSBj/feeb0da1e907ce333ce0c811b64f1a67/CS_Wyndham_Image_1_Container.jpg?w=&h=&q=80&fm=&f=",
         },
         {
           title: "Full product development",
           description:
             "Great design not only looks good, but has significant influence on profitability.",
           url:
-            "https://www.boldare.com/static/f405365eefb6e9611a96085d7d4da3cd/ace8e/about-us-founders.webp",
+            "https://images.ctfassets.net/3cttzl4i3k1h/44FISa2gjZntJAg2orNTtp/09ece4ee5e9070a0f554e28af8d7c242/CS_Wyndham_Image_3_Container.jpg?w=&h=&q=80&fm=&f=",
         },
       ];
 
@@ -68,14 +63,54 @@
       // document.body.appendChild(pager);
       startingPoint.append(pager);
 
+      let pagerData2 = [
+        {
+          title: "Web and mobile development",
+          description:
+            "We design and create web and mobile apps that help reach business goals,We design and create web and mobile apps that help reach business goals,",
+          url:
+            "https://images.ctfassets.net/3cttzl4i3k1h/3VGlA6Rm5VLmRRcp7XbyZR/1dd48ccff29c92ed190333b867f5329a/DSC_3219.jpg?w=&h=&q=80&fm=&f=",
+        },
+        {
+          title: "Product design and UX/UI",
+          description:
+            "Great design not only looks good, but has significant influence on profitability. ",
+          url:
+            "https://images.ctfassets.net/3cttzl4i3k1h/43rP5SncrKyQKwwWGKW2cy/84a1780a9e45b27e15a6f12a16f193c0/DSC_2702.jpg?w=&h=&q=80&fm=&f=",
+        },
+      ];
       let pager1 = document.createElement("navigator-pager");
-      pager1.data = JSON.stringify(pagerData);
-      pager1.setAttribute("data", JSON.stringify(pagerData));
+      pager1.setAttribute("data", JSON.stringify(pagerData2));
       pager1.setAttribute("backdrop", "true");
-      // console.log(pager);
-      // document.body.appendChild(pager);
       let startingPoint2 = document.querySelector("#starting-point2");
       startingPoint2.append(pager1);
+
+      //Create after header
+      let headData = {
+        title: "Here, you’re not “just” a developer or a designer!",
+        description:
+          "Here, you change the way people use technology. So, let's step into the world where digital products not only work but also matter to the world, where you pave the way to your own achievements and where excellent team vibes can’t be faked.",
+        subDescription:
+          "Feels like home? We bet it does. Take your chances and join ",
+        styledText: "#StaqTeam!",
+        image:
+          "https://images.ctfassets.net/3cttzl4i3k1h/5zzn9KtALkFrCEvIa1aMrB/e469bd43278cc7fd80bb2ac246a01b74/CS_CBC_Image_3_Fluid.jpg?w=&h=&q=80&fm=&f=",
+        customElements: [],
+      };
+      let afterHeader = document.createElement("pip-after-header");
+      afterHeader.setAttribute("data", JSON.stringify(headData));
+
+      document.querySelector("#after-header-position").append(afterHeader);
+
+      // Simple Text
+      let textData = {
+        title: "Unifying the digital experience",
+        description:
+          "Continuing its commitment to digital innovation, Staq’s decided to redesign the company’s robust POS from the ground up, with an eye toward delivering a more modern, user-friendly experience. Together we pioneered greenfield design concepts that furthered Staq’s advantage by creating a system that increases team member efficiency, reduces user errors, and speeds time to mastery for new team members.",
+      };
+      let simpleText1 = document.createElement("pip-simple-txt");
+      simpleText1.setAttribute("data", JSON.stringify(textData));
+      document.querySelector("#simple-text1").append(simpleText1);
     </script>
   </body>
 </html>

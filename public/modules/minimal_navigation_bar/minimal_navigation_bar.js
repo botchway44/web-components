@@ -21,8 +21,8 @@ class MinimalNavigationBar extends HTMLElement {
         { name: "Case Study", route: "case-study.html" },
         { name: "About Us", route: "about.html" },
         { name: "Career", route: "career.html" },
-        { name: "Blog", route: "services.html" },
-        { name: "Contact", route: "services.html" },
+        { name: "Blog", route: "blog.html" },
+        { name: "Contact", route: "contact.html" },
       ],
       description:
         "The digital product design & development company and your guide on the digital transformation journey.",

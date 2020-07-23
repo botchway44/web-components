@@ -6,6 +6,27 @@
   color: white;
 }
 
+.styled {
+  /* color: #f1d624; */
+  font-weight: bold;
+  display: inline-block;
+}
+
+.customElements {
+  margin-top: 10px;
+  display: flex;
+}
+.customElements > * {
+  margin: 2px;
+}
+
+.styled::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 5px;
+  background-color: #f1d624;
+}
 .header-container {
   font-size: 0.85rem;
   font-family: sans-serif;

@@ -1,17 +1,16 @@
-class SimpleText extends HTMLElement {
+class Text extends HTMLElement {
   constructor() {
     super();
 
     this.template = `
         <span class = "title">This is the Text </span>
-        <span class = "description">This is the Text </span>
         `;
   }
 
   connectedCallback() {
     this.attachShadow({ mode: "open" });
 
-    this.data = JSON.parse(this.getAttribute("data")); // -> "Hello World"
+    // var att = this.getAttribute("data"); // -> "Hello World"
 
     // // console.log(JSON.parse(encodeURIComponent('{}')));
     // let obj = JSON.parse(att);
@@ -39,23 +38,31 @@ class SimpleText extends HTMLElement {
       container.classList.add("noBackground");
     }
 
-    let size = this.getAttribute("size") || "small";
-    if (size === "small") {
-    }
     //append HTML Template to container
     container.innerHTML = this.template;
     //Load Stylesheet this way
     var preloadLink = document.createElement("link");
-    preloadLink.href = "/modules/simple_text/simple_text.css";
+    preloadLink.href = "/modules/text/text.css";
     preloadLink.rel = "stylesheet";
     this.shadowRoot.appendChild(preloadLink);
 
     //create a handler for description
-    let title = this.getAttribute("title") || this.data.title || "";
-    let des = this.getAttribute("description") || this.data.description || "";
-
+    let title = this.getAttribute("text") || "Lorem Ipsum"; // -> "A new value"
     container.querySelector(".title").textContent = title;
-    container.querySelector(".description").textContent = des;
+
+    //Check Align
+    let align = this.getAttribute("position") || "left";
+    if (align === "left") {
+      container.classList.add("align-left");
+    }
+
+    if (align === "right") {
+      container.classList.add("align-right");
+    }
+
+    if (align === "center") {
+      container.classList.add("align-center");
+    }
   }
 
   disconnectedCallback() {}
@@ -69,4 +76,4 @@ class SimpleText extends HTMLElement {
   }
 }
 
-window.customElements.define("pip-simple-txt", SimpleText);
+window.customElements.define("pip-text", Text);

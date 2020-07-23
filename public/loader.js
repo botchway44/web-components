@@ -19,3 +19,4 @@ import "/modules/fixed_navigation/fixed_navigation.js";
 import "/modules/login_page/login_page.js";
 import "/modules/minimal_footer/minimal_footer.js";
 import "/modules/title/title.js";
+import "/modules/text/text.js";

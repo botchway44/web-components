@@ -12,7 +12,9 @@
     <pip-min-navigation></pip-min-navigation>
     <pip-header data="" theme="dark"></pip-header>
 
-    <pip-after-header></pip-after-header>
+    <!-- <pip-after-header></pip-after-header> -->
+    <div id="after-header-position"></div>
+
     <pip-explainer-txt theme="none"></pip-explainer-txt>
 
     <pip-flexible-container> </pip-flexible-container>
@@ -21,6 +23,12 @@
     <div id="grid-location"></div>
 
     <pip-minimal-footer></pip-minimal-footer>
+
+    <style>
+      #grid-location {
+        margin-top: 20vh;
+      }
+    </style>
 
     <script>
       let data = {
@@ -93,6 +101,23 @@
       let dataGrid = document.createElement("pip-data-grid");
       dataGrid.setAttribute("data", JSON.stringify(data));
       document.querySelector("#grid-location").appendChild(dataGrid);
+
+      //Create after header
+      let headData = {
+        title: "Here, you’re not “just” a developer or a designer!",
+        description:
+          "Here, you change the way people use technology. So, let's step into the world where digital products not only work but also matter to the world, where you pave the way to your own achievements and where excellent team vibes can’t be faked.",
+        subDescription:
+          "Feels like home? We bet it does. Take your chances and join ",
+        styledText: "#StaqTeam!",
+        image:
+          "https://res.cloudinary.com/de4rvmslk/image/upload/f_auto,q_auto,w_auto/v1/gatsby-cloudinary/Development-Teams-rocket.png",
+        customElements: [],
+      };
+      let afterHeader = document.createElement("pip-after-header");
+      afterHeader.setAttribute("data", JSON.stringify(headData));
+
+      document.querySelector("#after-header-position").append(afterHeader);
     </script>
   </body>
 </html>
