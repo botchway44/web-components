@@ -39,8 +39,6 @@
     <br />
     <br />
 
-    <pip-minimal-footer></pip-minimal-footer>
-
     <script>
       //Create after header
       let headData = {
@@ -122,6 +120,22 @@
       let explainer2 = document.createElement("pip-explainer-img");
       explainer2.setAttribute("data", JSON.stringify(explainerData2));
       document.querySelector("#explainer-point1").append(explainer2);
+
+      //Using the Footer
+      const footData = {
+        name: " Software Stack",
+        year: "2020",
+
+        socialIcons: [
+          { name: "facebook", link: "index.html" },
+          { name: "instagram", link: "" },
+          { name: "twitter", link: "" },
+          { name: "linkedin", link: "" },
+        ],
+      };
+      let footer = document.createElement("pip-minimal-footer");
+      footer.setAttribute("data", JSON.stringify(footData));
+      document.body.append(footer);
     </script>
   </body>
 </html>

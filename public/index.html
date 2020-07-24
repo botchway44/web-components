@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/navigation.css" />
+    <!-- <link rel="stylesheet" href="css/navigation.css" /> -->
     <link rel="stylesheet" href="css/fonts.css" />
     <script src="loader.js" defer type="module"></script>
   </head>
 
   <body>
-    <pip-navigation id="nav"></pip-navigation>
-
+    <div class="navContainer"></div>
+    <!-- <pip-navigation></pip-navigation> -->
     <pip-pager></pip-pager>
 
     <div id="explainer-point1"></div>
@@ -71,7 +71,7 @@
     <div id="grid-location"></div>
     <br />
     <br />
-    <pip-minimal-footer></pip-minimal-footer>
+
     <!-- <div class="pager"></div> -->
 
     <style>
@@ -119,6 +119,28 @@
     </style>
 
     <script>
+      //SetUpNavigation
+      let navData = {
+        title: "STAQS",
+        links: [
+          { name: "Services", route: "services.html" },
+          { name: "Case Study", route: "case-study.html" },
+          { name: "About Us", route: "about.html" },
+          { name: "Career", route: "career.html" },
+          { name: "Blog", route: "blog.html" },
+          { name: "Contact", route: "contact.html" },
+        ],
+        description:
+          "The digital product design & development company and your guide on the digital transformation journey.",
+        miniDescription: "Do you have a product in mind? <br> Get in touch.",
+        customNavElems: [
+          { customElemName: "pip-shadow-button", route: "services.html" },
+        ],
+      };
+      let navigation = document.createElement("pip-navigation");
+      navigation.setAttribute("data", JSON.stringify(navData));
+      document.querySelector(".navContainer").append(navigation);
+
       let data = {
         items: [
           {
@@ -222,6 +244,22 @@
       let simpleText1 = document.createElement("pip-simple-txt");
       simpleText1.setAttribute("data", JSON.stringify(textData));
       document.querySelector("#simple-text1").append(simpleText1);
+
+      //Using the Footer
+      const footData = {
+        name: " Software Stack",
+        year: "2020",
+
+        socialIcons: [
+          { name: "facebook", link: "index.html" },
+          { name: "instagram", link: "" },
+          { name: "twitter", link: "" },
+          { name: "linkedin", link: "" },
+        ],
+      };
+      let footer = document.createElement("pip-minimal-footer");
+      footer.setAttribute("data", JSON.stringify(footData));
+      document.body.append(footer);
     </script>
   </body>
 </html>

@@ -22,8 +22,6 @@
 
     <div id="grid-location"></div>
 
-    <pip-minimal-footer></pip-minimal-footer>
-
     <style>
       #grid-location {
         margin-top: 20vh;
@@ -118,6 +116,22 @@
       afterHeader.setAttribute("data", JSON.stringify(headData));
 
       document.querySelector("#after-header-position").append(afterHeader);
+
+      //Using the Footer
+      const footData = {
+        name: " Software Stack",
+        year: "2020",
+
+        socialIcons: [
+          { name: "facebook", link: "index.html" },
+          { name: "instagram", link: "" },
+          { name: "twitter", link: "" },
+          { name: "linkedin", link: "" },
+        ],
+      };
+      let footer = document.createElement("pip-minimal-footer");
+      footer.setAttribute("data", JSON.stringify(footData));
+      document.body.append(footer);
     </script>
   </body>
 </html>

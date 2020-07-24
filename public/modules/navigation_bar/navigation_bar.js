@@ -19,29 +19,29 @@ class NavigationBar extends HTMLElement {
         </div>
         `;
 
-    this.data = {
-      title: "STAQS",
-      links: [
-        { name: "Services", route: "services.html" },
-        { name: "Case Study", route: "case-study.html" },
-        { name: "About Us", route: "about.html" },
-        { name: "Career", route: "career.html" },
-        { name: "Blog", route: "blog.html" },
-        { name: "Contact", route: "contact.html" },
-      ],
-      description:
-        "The digital product design & development company and your guide on the digital transformation journey.",
-      miniDescription: "Do you have a product in mind? <br> Get in touch.",
-      customNavElems: [
-        { customElemName: "pip-shadow-button", route: "services.html" },
-      ],
-    };
+    // this.data = {
+    //   title: "STAQS",
+    //   links: [
+    //     { name: "Services", route: "services.html" },
+    //     { name: "Case Study", route: "case-study.html" },
+    //     { name: "About Us", route: "about.html" },
+    //     { name: "Career", route: "career.html" },
+    //     { name: "Blog", route: "blog.html" },
+    //     { name: "Contact", route: "contact.html" },
+    //   ],
+    //   description:
+    //     "The digital product design & development company and your guide on the digital transformation journey.",
+    //   miniDescription: "Do you have a product in mind? <br> Get in touch.",
+    //   customNavElems: [
+    //     { customElemName: "pip-shadow-button", route: "services.html" },
+    //   ],
+    // };
   }
 
   connectedCallback() {
     this.attachShadow({ mode: "open" });
 
-    // var att = this.getAttribute("data"); // -> "Hello World"
+    this.data = JSON.parse(this.getAttribute("data")) || {}; // -> "Hello World"
 
     // // console.log(JSON.parse(encodeURIComponent('{}')));
     // let obj = JSON.parse(att);

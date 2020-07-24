@@ -5,7 +5,7 @@ class MinimalFooter extends HTMLElement {
     this.template = `
         <div class="footer-details">
             <div class="site-details">
-            Software Staqs - 2020, Inc. All rights reserved.
+            <span class="name">Software Staqs </span> -  <span class="year"> 2020 </span>, Inc. All rights reserved.
             </div>
 
             <div class="site-details">
@@ -13,32 +13,30 @@ class MinimalFooter extends HTMLElement {
 
 
             <div class="icon-container">
-                <a href="#">
-                <svg class="icon"><use xlink:href="/svgs/icons.svg#icon-facebook"></svg>
-                </a>
-
-                <a href="#">
-                <svg class="icon"><use xlink:href="/svgs/icons.svg#icon-linkedin"></svg>
-                </a>
-
-                <a href="#">
-                <svg class="icon"><use xlink:href="/svgs/icons.svg#icon-twitter"></svg>
-                </a>
-
-                <a href="#">
-                <svg class="icon"><use xlink:href="/svgs/icons.svg#icon-instagram"></svg>
-                </a>
+              
            </div>
 
             </div>
         </div>
         `;
+
+    // this.data = {
+    //   name: " Software Stack",
+    //   year: "2020",
+
+    //   socialIcons: [
+    //     { name: "facebook", link: "index.html" },
+    //     { name: "instagram", link: "" },
+    //     { name: "twitter", link: "" },
+    //     { name: "linkedin", link: "" },
+    //   ],
+    // };
   }
 
   connectedCallback() {
     this.attachShadow({ mode: "open" });
 
-    // var att = this.getAttribute("data"); // -> "Hello World"
+    this.data = JSON.parse(this.getAttribute("data")) || {}; // -> "Hello World"
 
     // // console.log(JSON.parse(encodeURIComponent('{}')));
     // let obj = JSON.parse(att);
@@ -60,14 +58,22 @@ class MinimalFooter extends HTMLElement {
     preloadLink.rel = "stylesheet";
     this.shadowRoot.appendChild(preloadLink);
 
-    let theme = this.getAttribute("theme"); // -> "A new value"
-    if (theme === "dark") {
-      console.log("Theme Dark");
-      container.classList.add("dark");
-    } else {
-      console.log("Theme White");
-      container.classList.add("white");
-    }
+    container.querySelector(".name").innerHTML = this.data.name;
+    container.querySelector(".year").innerHTML = this.data.year;
+
+    // let theme = this.getAttribute("theme"); // -> "A new value"
+    // if (theme === "dark") {
+    //   console.log("Theme Dark");
+    //   container.classList.add("dark");
+    // } else {
+    //   console.log("Theme White");
+    //   container.classList.add("white");
+    // }
+
+    this.createSocialIcons(
+      container.querySelector(".icon-container"),
+      this.data.socialIcons
+    );
   }
 
   disconnectedCallback() {}
@@ -78,6 +84,18 @@ class MinimalFooter extends HTMLElement {
   attributeChangedCallback(attr, oldValue, newValue) {
     // if (attr === 'foo') this.doSomething();
     // console.log("Attribute Changed");
+  }
+
+  createSocialIcons(container, data) {
+    if (data) {
+      for (const item of data) {
+        let link = document.createElement("a");
+        link.href = item.link;
+        const svg = `  <svg class="icon"><use xlink:href="/svgs/icons.svg#icon-${item.name}"></svg>`;
+        link.innerHTML = svg;
+        container.appendChild(link);
+      }
+    }
   }
 }
 

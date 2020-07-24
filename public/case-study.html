@@ -19,7 +19,6 @@
 
     <div id="simple-text1"></div>
     <div id="starting-point2"></div>
-    <pip-minimal-footer></pip-minimal-footer>
 
     <style>
       pip-simple-txt {
@@ -111,6 +110,22 @@
       let simpleText1 = document.createElement("pip-simple-txt");
       simpleText1.setAttribute("data", JSON.stringify(textData));
       document.querySelector("#simple-text1").append(simpleText1);
+
+      //Using the Footer
+      const footData = {
+        name: " Software Stack",
+        year: "2020",
+
+        socialIcons: [
+          { name: "facebook", link: "index.html" },
+          { name: "instagram", link: "" },
+          { name: "twitter", link: "" },
+          { name: "linkedin", link: "" },
+        ],
+      };
+      let footer = document.createElement("pip-minimal-footer");
+      footer.setAttribute("data", JSON.stringify(footData));
+      document.body.append(footer);
     </script>
   </body>
 </html>
