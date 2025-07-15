@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <script src="loader.js" defer type="module"></script>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+  </head>
+  <body>
+    <pip-min-navigation></pip-min-navigation>
+    <!-- <pip-header data="" theme="dark"></pip-header> -->
+
+    <div id="after-header-position"></div>
+    <!-- <pip-after-header></pip-after-header> -->
+
+    <br />
+    <br />
+    <br />
+    <div id="explainer-point1"></div>
+    <!-- <pip-explainer-img position="reverse"></pip-explainer-img> -->
+
+    <br />
+    <br />
+    <br />
+    <div id="grid-location"></div>
+
+    <br />
+    <br />
+    <br />
+
+    <br />
+    <br />
+    <br />
+    <div id="explainer-point2"></div>
+    <!-- <pip-explainer-img></pip-explainer-img> -->
+    <br />
+    <br />
+    <br />
+
+    <pip-minimal-footer></pip-minimal-footer>
+
+    <script>
+      //Create after header
+      let headData = {
+        title: "Real Client Work !!",
+        description:
+          "Here, you change the way people use technology. So, let's step into the world where digital products not only work but also matter to the world, where you pave the way to your own achievements and where excellent team vibes can’t be faked.",
+        subDescription: `Software Staqs cares about people first! I truly believe it's the best place to work in the world. As an intern, I was able to meet with and do real client work.`,
+        styledText: "#Botchway",
+        image:
+          "https://images.ctfassets.net/3cttzl4i3k1h/IRBHxGNcfH6SgpkyyogOa/30e31f620dae463d82e73d3496e086a7/CS_ClubCorp_Image_1_Container.jpg?w=&h=&q=80&fm=&f=",
+        customElements: [],
+      };
+      let afterHeader = document.createElement("pip-after-header");
+      afterHeader.setAttribute("data", JSON.stringify(headData));
+
+      document.querySelector("#after-header-position").append(afterHeader);
+
+      // Image Grid
+      let data = {
+        items: [
+          {
+            title: "User-centered design creates seamless digital experiences",
+            description:
+              "By adding design touches that incorporated the latest Google and Apple mobile design guidelines, we brought the loyalty process to life and gamified the experience so users can watch their points climb.",
+            image:
+              "https://images.ctfassets.net/3cttzl4i3k1h/3osx95dsC9HGnERbmI7qGt/b7dbd06c6a8045e58938140ea9d5da08/CS_CBC_Image_1_Fluid.jpg?w=&h=&q=80&fm=&f=",
+          },
+
+          {
+            title: "User journey highlights features that delight customers",
+            description:
+              "As a foundational element of our approach to helping Regal, Staqs drafted a user journey map that outlines the 10 steps in a typical journey through the cinema, ",
+            image:
+              "https://images.ctfassets.net/3cttzl4i3k1h/4RvdCkrEz1enVzHfPHHnea/d341177cd25b557641fef08bdda7efc9/CS_CBC_Image_2_Container.jpg?w=&h=&q=80&fm=&f=",
+          },
+        ],
+      };
+
+      let dataGrid = document.createElement("pip-data-grid");
+      dataGrid.setAttribute("data", JSON.stringify(data));
+      document.querySelector("#grid-location").appendChild(dataGrid);
+
+      //create explainer image
+      let explainerData = {
+        title: "User-centered design creates seamless digital experiences",
+        description:
+          "Putting your customers at the heart of the design process results in products they will turn to again and again. Our integrated approach—where visual UI is informed by UX strategy and user research—achieves best-in-industry results that are not only visually stunning, but also uniquely express your brand, drive customer engagement, and accelerate your strategic goals. An understanding of the technical platforms we design for enables our Product Design team to fully embrace the capabilities of each medium and maintain feasibility within project constraints.",
+        image:
+          "https://images.ctfassets.net/3cttzl4i3k1h/6YG1Lqrmxm5NhS10UHgmPC/0af4ec6929b3fc58e4f4de989e33e160/CS_CBC_Image_4_Container.jpg?w=&h=&q=80&fm=&f=",
+
+        backdropColor: "",
+        customElements: [
+          { tag: "pip-text", text: "Accra Ghana" },
+          { tag: "pip-text", text: "+233 2466 92602" },
+        ],
+      };
+
+      let explainer1 = document.createElement("pip-explainer-img");
+      explainer1.setAttribute("data", JSON.stringify(explainerData));
+      explainer1.setAttribute("position", "reverse");
+      document.querySelector("#explainer-point2").append(explainer1);
+
+      //create explainer image
+      let explainerData2 = {
+        title: "Only trust ideas from people who can actually build them",
+        description:
+          "Our strategists remove the guesswork of innovating a new digital product by introducing methods that focus on authentic customer needs, product viability, and market insights. We’ll work with you to create a product that delivers the kind of unique value that drives market share and competitive advantage. In our on-site Staqs Labs, we’ll refine new concepts through rapid cycles of build-measure-learn, then work with our software engineers to build your product on-time and on-budget.",
+        // image: "https://www.rootstrap.com/img/locations/rootstrap-locations-new-york.jpg",
+        image:
+          "https://images.ctfassets.net/3cttzl4i3k1h/3ItQJJyJzMJsAshKqxkqnM/ac2a02ad0308ec52f8cf69e73a2e4355/CS_Wyndham_Image_2_Fluid.jpg?w=&h=&q=80&fm=&f=",
+        backdropColor: "",
+        customElements: [
+          { tag: "pip-text", text: "Accra Ghana" },
+          { tag: "pip-text", text: "+233 2466 92602" },
+        ],
+      };
+
+      let explainer2 = document.createElement("pip-explainer-img");
+      explainer2.setAttribute("data", JSON.stringify(explainerData2));
+      document.querySelector("#explainer-point1").append(explainer2);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,186 @@
+:host {
+  display: block;
+}
+.dark {
+  /* background-color: #242424; */
+  background-color: #17313b;
+  color: white;
+}
+
+.white {
+  background-color: #f0f0f0;
+
+  /* font-weight: bolder; */
+  /* background-color: #f6f6f6; */
+  color: black;
+}
+.noBackground {
+  background-color: #f0f0f000;
+
+  /* font-weight: bolder; */
+  /* background-color: #f6f6f6; */
+  color: black;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-left {
+  text-align: left;
+}
+.align-center {
+  text-align: center;
+}
+
+.text-container {
+  /* font-size: 0.85rem; */
+  font-family: "Josefin Sans";
+  display: flex;
+  flex-direction: column;
+
+  /* margin-left: 25%; */
+  /* margin-right: 25%; */
+  /* background-color: #f6f6f6; */
+}
+
+.text-container .title {
+  /* margin-bottom: 20px; */
+  /* font-family: "Poppins", sans-serif; */
+  /* font-size: 2.12rem; */
+  font-weight: bold;
+  color: #000000b7;
+  text-align: left;
+  text-align: inherit;
+}
+
+.text-container .description {
+  /* width: 45vw; */
+  /* font-size: 1.12rem; */
+  /* line-height: 1.92rem; */
+  color: rgba(0, 0, 0, 0.74);
+}
+
+/* 
+    Screen Resolutions Fix
+    default styles here for older browsers. 
+       I tend to go for a 600px - 960px width max but using percentages
+    */
+@media only screen and (min-width: 960px) {
+  /* styles for browsers larger than 960px; */
+}
+
+@media only screen and (min-width: 1440px) {
+  /* styles for browsers larger than 1440px; */
+}
+@media only screen and (min-width: 2000px) {
+  /* for sumo sized (mac) screens */
+}
+@media only screen and (max-device-width: 480px), (max-width: 1200px) {
+  /* styles for mobile browsers smaller than 480px; (iPhone) */
+  .text-container {
+    /* font-size: 0.85rem; */
+    /* font-family: "Josefin Sans"; */
+    /* display: flex; */
+    /* flex-direction: column; */
+
+    /* margin-left: 10%; */
+    /* margin-right: 10%; */
+    /* background-color: #f6f6f6; */
+    text-align: justify;
+  }
+
+  .text-container .description {
+    width: 100%;
+    /* font-size: 0.962rem; */
+  }
+
+  .text-container .title {
+    text-align: left;
+    font-weight: bold;
+    /* color: #343a40; */
+    /* font-size: 2.2rem; */
+  }
+}
+@media only screen and (device-width: 768px) {
+  /* default iPad screens */
+
+  /* :host{
+              display: none;
+          } */
+}
+/* different techniques for iPad screening */
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* For portrait layouts only */
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* For landscape layouts only */
+}
+
+.anim-slide-right {
+  -webkit-animation: slide-in-right 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both;
+  animation: slide-in-right 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.anim-slide-left {
+  -webkit-animation: slide-in-left 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: slide-in-left 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+    /* opacity: 0 */
+  }
+
+  to {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    /* opacity: 1 */
+  }
+}
+
+@-webkit-keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+    /* opacity: 0 */
+  }
+
+  to {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    /* opacity: 1 */
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    /* opacity: 0 */
+  }
+
+  to {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+    /* opacity: 1 */
+  }
+}
+
+@-webkit-keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(0p);
+    transform: translateX(0);
+    /* opacity: 0 */
+  }
+
+  to {
+    -webkit-transform: translateX(10px);
+    transform: translateX(0px);
+    /* opacity: 1 */
+  }
+}

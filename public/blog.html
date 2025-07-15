@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <script src="loader.js" defer type="module"></script>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+  </head>
+  <body>
+    <pip-min-navigation></pip-min-navigation>
+    <!-- <pip-header data="" theme="dark"></pip-header> -->
+
+    <div id="after-header-position"></div>
+    <!-- <pip-after-header></pip-after-header> -->
+
+    <br />
+    <br />
+    <br />
+    <div id="explainer-point1"></div>
+    <!-- <pip-explainer-img position="reverse"></pip-explainer-img> -->
+
+    <br />
+    <br />
+    <br />
+    <div id="grid-location"></div>
+
+    <br />
+    <br />
+    <br />
+
+    <br />
+    <br />
+    <br />
+    <div id="explainer-point2"></div>
+    <!-- <pip-explainer-img></pip-explainer-img> -->
+    <br />
+    <br />
+    <br />
+
+    <pip-minimal-footer></pip-minimal-footer>
+
+    <script>
+      //Create after header
+      let headData = {
+        title: "Real Client Work !!",
+        description:
+          "Here, you change the way people use technology. So, let's step into the world where digital products not only work but also matter to the world, where you pave the way to your own achievements and where excellent team vibes can’t be faked.",
+        subDescription: `Software Staqs cares about people first! I truly believe it's the best place to work in the world. As an intern, I was able to meet with and do real client work.`,
+        styledText: "#Botchway",
+        image:
+          "https://www.storyation.com/wp-content/uploads/2019/06/Storyation_PitchingImages_041017_CREDITDominicLoneragan_0234.jpg",
+        customElements: [],
+      };
+      let afterHeader = document.createElement("pip-after-header");
+      afterHeader.setAttribute("data", JSON.stringify(headData));
+
+      document.querySelector("#after-header-position").append(afterHeader);
+
+      // Image Grid
+      let data = {
+        items: [
+          {
+            title: "More Than a Resume Builder",
+            description:
+              "We provide our interns and new grads the freedom to step outside of the classroom and learn through action by working on significant projects.",
+            image:
+              "https://images.ctfassets.net/3cttzl4i3k1h/1TpZkg3tRX9WSi5NTEQDH9/af8fc16152d84a143ed5a95d279e0471/CS_NatGeo_Image_2_Fluid.jpg?w=&h=&q=80&fm=&f=",
+          },
+
+          {
+            title: "Mentorship",
+            description:
+              "Learn from Trees of all skill levels in an environment where your growth is the most important thing.",
+            image:
+              "https://images.ctfassets.net/3cttzl4i3k1h/2pfUX636qnDfGRWWhkJ48A/05b81e37945480de8f2bd932c4e24554/CS_NatGeo_Image_1_Container.jpg?w=&h=&q=80&fm=&f=",
+          },
+        ],
+      };
+
+      let dataGrid = document.createElement("pip-data-grid");
+      dataGrid.setAttribute("data", JSON.stringify(data));
+      document.querySelector("#grid-location").appendChild(dataGrid);
+
+      //create explainer image
+      let explainerData = {
+        title:
+          "Enterprise-grade, custom app development engineered to your unique needs",
+        description:
+          "Award-winning native mobile app development requires expertise across multiple platforms and all phases of the development lifecycle. We build, test, deploy, and support at scale, and our experience enables us to launch new deployments every few weeks instead of every few months.",
+        image:
+          "https://www.storyation.com/wp-content/uploads/2020/06/3-1400x788.jpg",
+
+        backdropColor: "",
+        customElements: [
+          { tag: "pip-text", text: "Accra Ghana" },
+          { tag: "pip-text", text: "+233 2466 92602" },
+        ],
+      };
+
+      let explainer1 = document.createElement("pip-explainer-img");
+      explainer1.setAttribute("data", JSON.stringify(explainerData));
+      explainer1.setAttribute("position", "reverse");
+      document.querySelector("#explainer-point2").append(explainer1);
+
+      //create explainer image
+      let explainerData2 = {
+        title: "Starting Point ",
+        description:
+          " As Frank Sinatra said, “if I can make it there, I can make it anywhere.” While our roots are in central Ghana, part of us belongs to the Southern. Between hosting Staqs workshops in Accra to teaching our process to some of the biggest agencies in the world, our Accra team is growing in size and services. With our  presence, we help clients take a big bite out of the Big Apple. ",
+        // image: "https://www.rootstrap.com/img/locations/rootstrap-locations-new-york.jpg",
+        image:
+          "https://www.storyation.com/wp-content/uploads/2020/06/1-1400x933.jpg",
+        backdropColor: "",
+        customElements: [
+          { tag: "pip-text", text: "Accra Ghana" },
+          { tag: "pip-text", text: "+233 2466 92602" },
+        ],
+      };
+
+      let explainer2 = document.createElement("pip-explainer-img");
+      explainer2.setAttribute("data", JSON.stringify(explainerData2));
+      document.querySelector("#explainer-point1").append(explainer2);
+    </script>
+  </body>
+</html>
